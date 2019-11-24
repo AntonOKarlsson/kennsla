@@ -1,0 +1,8 @@
+book_filename: "timaglosur"
+delete_merged_file: true
+language:
+  ui:
+    chapter_name: "Kafli "
+  label:
+    fig: "Mynd "
+    tab: "Tafla "

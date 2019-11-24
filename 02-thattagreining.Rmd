@@ -1,0 +1,849 @@
+# Þáttagreining
+
+Við notum þáttagreiningu þegar við viljum vita hversu margar hugsmíðar eru metnar með safni mælibreyta, hvaða hugsmíðar þetta kunna að vera án þess að vera kominn á þann stað að geta prófað ákveðnar tilgátur um orsakatengsl milli hugsmíðanna (bls. 20).
+
+Algengt er að þáttagreining sé notuð til að koma auga á helstu hugsmíðar sem þarf til að gera grein fyrir innan tiltekins fræðasviðs (bls. 20)
+
+Annað mikilvægt notagildi þáttagreiningar er að hjálpa til við þróun mælitækja til að leggja mat á hugsmíðar (bls. 22)
+
+
+## Markmið þáttagreiningar og lykilhugtök
+
+Þáttagreining er aðferð til að ákvarða fjölda einstakra hugsmíða sem þarf til að gera grein fyrir mynstri fylgni milli mismunandi mælinga. Þetta má einnig setja fram á þann hátt að þáttagreiningu sé beitt til að ákvarða fjölda eintakra hugsmíða sem metnar eru með setti mælinga. 
+
+Þættir (eða common factors) eru undirliggjand/ómældar hugsmíðir sem gengið er út frá að geri grein fyrir fylgni milli breyta í gagnasafninu. 
+
+Þegar þáttagreining er framkvæmd fáum við líka upplýsingar sem hjálpa til við túlkun þáttanna og eðli þeirra. Þar ber fyrst að nefna þáttahleðslur (factor loadings) sem segja til um styrkleika og stefnu tengsla milli mælinga og undirliggjandi þáttar.
+
+Mikilvæg hugtök:
+
+ - mældar breytur (measured variables)
+ - safn mælibreyta (battery)
+ - þáttur (common factor eða latent variable)
+ - einstakir þættir (unique factors)
+      - sértækur þáttur (specific factor)
+      - mælivilla (measurement error)
+ - Þáttaskýring (communality): Hlutfall dreifni sem er skýrð af almennu þáttunum (common factors). Eru reiknaðar með því að leggja saman hleðstlur ákveðinnar breytu í öðru veldi yfir þáttalausnina. Segir til um hversu mikið lausnin í heild sinni skýrir af dreifingu viðkomandi breytu.
+ - Eigingildi (eigenvalue): Summa hleðsla sem búið er að setja í annað veldi fyrir tiltekinn þátt - segir til um hversu mikið af dreifni er skýrð af hverjum einstökum þætti þáttalausnarinnar. Oft notað til að ákvaða hversu marga þætti á að draga út úr gagnasafni fyrir þáttalausnina.
+ 
+ 
+Formlega séð er þáttur skilgreindur sem ómæld hugsmíð sem hefur línuleg áhrif á meira en eina mælda breytu í safni mælibreyta. Á ensku eru þættir kallaðir common factors þar sem þeir eru sameiginlegir fyrir meira en eina breytu. Ennfremur er módelið skilgreint þannig að um verður að ræða mun færri þætti heldur en mældar breytur er til staðar í gagnasafninu. Þetta kemur til vegna þess að gengið er út frá þeirri forsíðu að fylgnistuðlar milli breyta í gagnasafni sem eru ekki núll, koma til vegna þess að báðar breyturnar (það er, þær sem mælast með fylgni sín á milli) eru undir áhrifum frá sömu undirliggjandi breytunni.
+
+Einstakir þættir eru ómælanlegar uppsprettur línulegra áhrif á hverja einstaka breytu í gagnasafninu. Samkvæmt líkani þáttagreiningar standa einstakir þættir fyrir það skor mældrar breytu sem er ekki skýrt af þáttum líkansins. Þar sem einstakir þættir hafa aðeins áhrif á stakar mældar breytur í gagnasafninu og tengjast ekki hvor öðrum þá geta einstakir þættir ekki skýrt fylgni milli mældra breyta. Einstakir þættir skiptast í tvennt: Specific factor og mælivillu. Specific þátturinn vísar til kerfisbundinna áhrifa sem aðeins hafa áhrif á þessa tilteknu mældu breytu - þess vegna koma þessir þættir fram aftur og aftur í mælingum og hafa ekki áhrif á áreiðanleika mældrar breytu. Sterkir specific þættir benda til þess að mælingarnar eru undir miklum áhrifum hugsmíða sem þær áttu ekki að mæla. Hér er tekið dæmi um bjaga í orðalagi spurningar í mælitæki sem veðrur til þess að ýtt er undir líkurnar á ákveðnu svari hjá þátttakendum.
+
+Mælivilla eru handahófskennd áhrif á einstaka mælda breytu. Þar sem áhrif hennar eru handahófskennd þá mun hún hafa áhrif á áreiðanleika mælinga í þáttagreiningu - ef um er að ræða sterka mælivillu þá mun áreiðanleiki mælinganna líða fyrir það. Dæmi um slíkt gæti verið spurning í spurningalista sem orðuð er á tvíræðan hátt þannig að svarendur gætu valið eitt svar á einum tímapunkti en annað svar síðar, allt eftir því hver ástand svaranda er þegar spurningin er lögð fyrir og við hvaða tilefni spurningin er lögð fyrir.
+
+Horfa má á deifni í þáttagreiningu út frá eftirfarandi einföldu formúlum sem segja til um hvernig má skipta niður dreifni mældra breyta:
+
+1) Mæld dreifni = sameiginleg dreifni + einstök dreifni
+2) einstök dreifni = sértæk dreifni + villudreifni
+3) þáttaskýring(1) = sameiginleg dreifni/mæld dreifni
+3) þáttaskýring(1) = 1-(einstök dreifni/mæld dreifni)
+4) Áreiðanleiki(2) = (sameiginleg dreifni+sértæk dreifni)/mæld dreifni
+4) Áreiðanleiki(2) = 1-(villudreifni/mæld dreifni)
+
+## Samdreifni- og fylgnifylki
+
+Grundvöllur þáttagreiningar er samdreifnifylki (covariance matrix) en þar má sjá samdreifni allar breyta gagnasafnsins á móti hver annarri. Samdreifni skilgreinum við sem línulegt samband tveggja breyta sem er gefið upp á kvarða breytanna sjálfra. Samdreifni í úrtakinu segir okkur að hvaða marki tvær breytur breytast sameiginlega (eru tengdar) í þýðinu. 
+
+Formúlan fyrir samdreifni í úrtaki er eftirfarandi:
+$COV_{XY} = s_{xy} = \frac{\sum\limits_{i=1}^{n}{(X_{i}-\bar{X})(Y_{i}-\bar{Y})} }{n-1}$
+
+Þarna sjáum við að grunnurinn að baki því að skoða samdreifni er að við skoðum að hvaða marki hver mæling á X og samsvarandi mæling á Y víkur frá meðalgildi hvorrar breytu fyrir sig. Þetta er gert fyrir hvert tilvik í gagnasafninu, þau lögð saman og loks deilt með fjölda í úrtaki, mínus 1. Ef samdreifni breytu er reiknuð fyrir sjálfa sig þá má sýna fram á að það er í raun dreifni viðkomandi breytu. Þess vegna er skálína samdreifnifylkis alltaf til marks um dreifni viðkomandi breytu.
+
+Samdreifni hefur engin mörk og getur bæði verið jákvæð eða neikvæð. Ef samdreifni er jákvæð er það til marks um að há gildi á annarri breytunni hafa tilhneigingu til að tengjast háum gildum á hinni breytunni. Neikvæði samdreifni merkir að há gildi á annarri breytunni tengjast að jafnaði lægri gildum á hinni breytunni. Ef samdreifnin er núll þá eru engin línuleg tengsl til staðar milli breytanna - það þýðir ekki að það séu engin tengsl, bara að það séu ekki línuleg tengsl.
+
+Þar sem erfitt getur verið að túlka samdreifni þá er oft búin til stöðluð útgáfa af honum. Ef við tökum samdreifni og stöðlum hana þá fáum við fylgni. Með öðrum orðum er fylgni stöðluð samdreifni tveggja breyta.
+
+$r_{xy}=\frac{COV_{XY}}{s_{x}s_{y} }$
+
+Eins og sést er kjarni fylgninnar, styrkleiki hennar og stefna bæði tilkomin vegna samdreifninnar.
+
+
+### Dæmi
+
+Í töflu \@ref(tab:fylgnifylki) má sjá fylgnifylki fyrir gagnasett um hvaða þættir skipta mestu máli þegar fólk kaupir sér bjór. Í gagnasafninu eru alls níu breytur en sjö þeirra voru notaðar til að mæla eiginleika bjórs. Þessar sjö breytur voru:
+ 
+ - verð bjórsins
+ - stærð
+ - alkóhólsinnihald
+ - orðspor bjórsins
+ - liturinn
+ - lyktin af bjórnum
+ - bragðið
+ 
+Hver og einn svarandi mat þessar breytur á hundrað punkta kvarða hversu mikilvægir honum þótti þær þegar komið væri að því að versla sex dósir af bjór.
+
+```{r, echo = FALSE, warning=FALSE, message=FALSE, fylgnifylki}
+
+library(foreign)
+library(psych)
+#library(semPlot)
+library(GPArotation)
+library(xtable)
+library(haven)
+
+gogn <- read_sav("~/Tölfræði III/tolfr3/timaglosur/FactBeer.sav")
+
+#ath missing values
+tafla = cor(gogn[,1:7], use="pairwise.complete.obs")
+
+cor.table <- xtable(tafla)
+knitr::kable(cor.table
+             , digits = 2
+             , caption = "Fylgnifylki fyrir mat á mikilvægi eiginleika bjórs þegar ákvörðun er tekin um kaup.")
+
+```
+
+
+Til þess að gögn henti fyrir þáttagreiningu er mikilvægt að dreifing sé til staðar í fylgnifylkinu, það er, bæði sé um að ræða háar tölur (neikvæðar og jákvæðar) en einnig að fyrir hendi séu gildi sem eru núll eða nærri núlli. Ef þetta kemur fram í fylgnifylkinu þá er það til marks um að fyrir hendi séu undirliggjandi þættir sem hafa áhrif á vissar breytur en ekki aðrar og að milli þessara þátta sé takmörkuð eða engin fylgni.
+
+
+## Myndræn framsetning þáttagreiningar
+
+Þegar við setjum myndrænt fram niðurstöður þáttagreiningu þá er það gert samkvæmt ákveðnum reglum. Dæmi um það má sjá á mynd \@ref(fig:thatt1) þar sem búið er að þáttagreina bjórgagnasafnið með tveimur undirliggjandi þáttum. Á þessari mynd er ennfremur búið að lita þáttahleðslurnar með grænu eða rauðu eftir því hvort um er að ræða jákvæðar eða neikvæðar hleðslur á þættina.
+
+```{r, echo = FALSE, warning=FALSE, message=FALSE, thatt1, fig.cap = "Þáttagreining bjórskala"}
+gogn2 <- gogn[complete.cases(gogn),]
+
+fit.1 <- factanal(gogn2[,1:7],factors=2,rotation="quartimin", method = "mle")
+
+#semPaths(fit.1, rotation=1, "std", "est",reorder = T, edge.label.cex = 1.2)
+
+```
+
+Mikilvægustu þættirnir eru þó eftirfarandi:
+
+ - Þættir eru teiknaðir sem hringir
+ - Mældar breytur eru teiknaðir sem ferhyrningar eða ferningar
+ - Línuleg áhrif eru táknuð með örvum (með einum örvarenda) sem liggja frá viðkomandi þætti og í áttina að mældu breytunni sem er undir áhrifum frá viðkomandi þætti
+ - Línuleg tengsl á borð við fylgni eru táknum með tvöföldum örvum
+ - Ef um er að ræða tvöfalda ör sem fer frá tiltekinni breytu í sjálfa sig, þá er um að ræða dreifni viðkomandi breytu.
+ - Tengsl breyta (hvort sem þau eru í ákveðna átt eða ekki) eru táknuð með því að skrifa tölugildið við nærri viðkomandi tengslum
+ - Á myndina vantar einstöku þættina sem hafa áhrif á hverja mælda breytu en þeir eru jafnan táknaðir sem hringir fyrir neðan mældu breyturnar, einn fyrir hverja mælda breytu, sem hefur tengslin 1 við hverja breytu en enga fylgni sín á milli.
+ 
+Hér er mikilvægt að taka eftir því að gert er ráð fyrir því að engin fylgni sé milli þáttanna tveggja sem sést á því að engin ör liggur milli þeirra tveggja. Þetta er kallað hornskökk þáttagreining (orthogonal factor analysis) og er algeng forsenda sem er gefin í þáttagreiningu. Fjallað verður betur um hana síðar.
+
+Einnig er mikilvægt að benda á að um er að ræða tvo þætti en það er eitthvað sem rannsakandi hefur ákveðið að gera á grunni þáttagreiningarinnar. Það er, fjöldi þátta sem er dreginn út úr gagnasafninu er eitthvað sem rannsakandi ákveður og byggir þá ákvörðun sína á ýmsum gögnum og niðurstöðum sem fást úr þáttagreiningunni sjálfri.
+
+## Formúlur þáttagreiningar
+
+Gott er að skoða helstu formúlu þáttagreiningar til að þekkja betur aðferðina og á hverju hún byggir. Yfirleitt er er þáttagreiningarlíkanið sett fram á formi fylkjareiknings.
+
+$P = \Lambda \Phi \Lambda^{T}+D_{\Psi}$
+
+Hérna þýðir P fylgnifylki í þýðinu fyrir mældar breytur í tilteknu safni mældra breyta sem við höfum áhuga á. Þetta fylgnifylki fæst með því að setja saman:
+
+ - fylkið Lambda, sem er fylki fyrir þáttahleðslur þáttalíkansins
+    - segir til um styrk og stefnu tengslanna milli þáttanna og mældu breytanna
+ - fylkið Lambda T er sama fylkið og áður (það er, fyrir þáttahleðslur) nema búið er að snúa því þannig að það sem áður voru dálkar eru nú raðir og það sem áður voru raðir eru nú dálkar
+ - fylkið fí er fylgnifylki milli þáttanna sem við erum að vinna með
+    - þegar unnið er með hornrétta þáttagreiningu þá getum við sleppt þessu fylki úr útreikningunum þar sem gengið er út frá því að engin fylgni sé milli þáttanna: $P = \Lambda\Lambda^{T}+D_{\Psi}$
+ - síðasta fylkið í formúlunni er D-psi en það stendur fyrir samdreifnifylki milli einstöku þáttanna. Þess vegna verður skálína fylkisins dreifni einstöku þáttanna en aðrir hlutar fylkisins eru núll þar sem ekki er gert ráð fyrir fylgni milli einstöku þáttanna.
+    - ennfremur, þar sem gert er ráð fyrir að mældu breyturnar hafi verið staðlaðar með corrlation structure modelinu, þá táknar skálínan í raun hlutfall dreifninnar í hverri mældri breytu sem skýrð er með einstöku þáttunum.
+    
+Þegar við tökum þetta saman þá þýðir þetta að ef við erum með hornrétta þáttagreiningu, þá teljum við okkur geta smíðað fylgnifylki breytanna í þýði með því að margfalda þáttahleðslufylkið með snúnu útgáfu af sjálfu sér og leggja við það samdreifnifylki einstakra þátta. Ef um væri að ræða hornskakkan snúning þá myndum við margfalda fyrri hluta formúlunnar með fylgnifylki þáttanna í líkaninu.
+
+
+### Annað dæmi
+
+Nú ætlum við að skoða annað dæmi. Við erum með gagnasafn yfir alla leikmenn sem hafa á einhverjum tímapunkti spilað með Boston Celtics í NBA deildinni í körfubolta. Við hreinsum aðeins til og veljum aðeins þá sem spiluðu fleiri en 50 leiki með liðinu. Einnig, þar sem varin skot voru fyrst talin tímabilið 1973 - 74 þá ætlum við aðeins að skoða leikmenn sem hófu að spila fyrir liðið eftir það tímabil. Við viljum skoða hvort hægt sé að finna undirliggjandi víddir fyrir hefðbundnar tölfræðimælingar á leikmönnum liðsins. Um er að ræða eftirfarandi mælibreytur:
+
+ - Stolnir boltar
+ - Varin skot
+ - Tapaðir boltar
+ - Villur
+ - Skotnýtingu
+ - Þriggja stiga skotnýtingu
+ - Vítaskotnýtingu
+ - Mínútur spilaðar að meðaltali í leik
+ - Skoruð stig að meðaltali í leik
+ - Fráköst að meðaltali í leik
+ - Stoðsendingar að meðaltali í leik
+ 
+```{r, warning=FALSE, echo=FALSE, message=FALSE}
+
+library(tidyverse)
+
+gogn = read.csv("celtics.csv")
+
+gogn = gogn %>% filter(G>50&From>1974) %>% 
+        select(c(-G,-AST,-TRB,-Rk,-Player,-From,-To,-Yrs,-PTS,-MP,-X3P,-X3PA,-FG,-FGA,-FT,-FTA,-ORB))
+
+names(gogn) = c("stol","vskot","tapb","vill","sknyt","sknyt3","sknyV","min","stig","frak","stods")
+
+gogn2 <- gogn[complete.cases(gogn),]
+
+```
+
+
+```{r, warning=FALSE, echo=FALSE, message=FALSE, BCfylgni}
+
+tafla = cor(gogn2, use="pairwise.complete.obs")
+
+cor.table <- xtable(tafla)
+knitr::kable(cor.table
+             , digits = 2
+             , caption = "Fylgnifylki fyrir leikmenn Boston Celtics frá 1974.")
+
+```
+
+
+Út frá þessum niðurstöðum getum við prófað okkur áfram með að búa til þáttalíkan fyrir þessi gögn. Án þess að leggja mikla hugsun í þetta þá gerum við þriggja þátta líkan. Út frá þessu líkani þá getum við reiknað okkur í gegnum formúluna: $P = \Lambda \Phi \Lambda^{T}+D_{\Psi}$
+
+Með því ætlum við að skoða hversu nálægt upprunalega fylgnifylkinu við komumst með því að endurgera það út frá niðurstöðum þáttagreiningarinnar. Fyrsta skrefið er að finna lambda fylkið, sem er fyrir þáttahleðslurnar. Það má sjá í töflu \@ref(tab:lambdafylki). Í töflunni sjáum við allar þáttahleðslur fyrir hverja og eina mælda breytu fyrir hvern og einn þátt.
+
+```{r, echo = FALSE, warning=FALSE, message=FALSE, lambdafylki}
+
+fit.0 <- factanal(gogn2, factors=3, method = "mle", rotation = 'none')
+
+d_psi= diag(fit.0$uniquenesses)
+
+lambda = fit.0$loadings[1:11,1:3]
+
+cor.table <- xtable(lambda)
+knitr::kable(cor.table
+             , digits = 2
+             , caption = "Lambda fylki")
+
+
+```
+
+Næsta skref er að snúa lambdafylkinu. Það er einfalt mál og má sjá í \@ref(tab:snuidlambdafylki).
+
+```{r, echo = FALSE, warning=FALSE, message=FALSE, snuidlambdafylki}
+
+snuidlambda = t(lambda)
+
+cor.table <- xtable(snuidlambda)
+knitr::kable(cor.table
+             , digits = 2
+             , caption = "Lambda fylki")
+
+
+```
+
+Þessi tvö fylki eru margfölduð saman (eins og gera má í fylkjareikningi) og loks er d-psi fylkinu bætt við, sem sjá má í \@ref(tab:dpsifylki). Í þessu dæmi erum við með að vinna með ótengda þætti og því getum við slepp fí-fylkinu úr greiningunni.
+
+```{r, echo = FALSE, warning=FALSE, message=FALSE, dpsifylki}
+
+cor.table <- xtable(d_psi)
+knitr::kable(cor.table
+             , digits = 2
+             , caption = "D-psi fylki")
+
+
+```
+
+Með þessar upplýsingar í farteskinu getum við nú reiknað okkar útgáfu af fylgnifylki þýðisins. Það má sjá í töflu \@ref(tab:popcorrmatrix). Það getum við svo borið saman við upprunalega fylgnifylkið okkar.
+
+```{r, echo = FALSE, warning=FALSE, message=FALSE, popcorrmatrix}
+
+pop_P = (as.matrix(lambda)%*%t(as.matrix(lambda)))+as.matrix(d_psi)
+
+cor.table <- xtable(pop_P)
+knitr::kable(cor.table
+             , digits = 2
+             , caption = "Fylgnifylki þýðisins út frá niðurstöðum þáttagreiningar")
+
+```
+
+Í töflu \@ref(tab:popcorrmatrix) er samanburður við upprunalega fylgnifylkið (fyrir ofan skálínu) og fylgnifylkið sem kom út úr þáttagreiningunni (fyrir neðan skálínu). Eins og sjá má eru niðurstöðurnar nokkurn veginn þær sömu, þó mögulega væri hægt að bæta mátgæðin enn frekar með því að minnka muninn milli upprunalega fylgnifylkisins og þess sem var gert út frá þáttagreiningu.
+
+```{r, echo = FALSE, warning=FALSE, message=FALSE, popcorrmatrix2}
+
+library(Matrix)
+
+tvofoldcorr= as.matrix(triu(tafla)+tril(pop_P))
+
+diag(tvofoldcorr) = 1
+
+cor.table <- xtable(tvofoldcorr)
+knitr::kable(cor.table
+             , digits = 2
+             , caption = "Tvö fylgnifylki; yfir skálínunni er upprunalega fylgnifylkið, undir skálínunni er fylgnifylgi út frá þáttagreiningunni")
+
+```
+
+## Í hvað notum við þáttagreiningu?
+
+Tvennskonar tilgangur
+
+### 1. Koma auga á hugsmíðar innan ákveðins sviðs (construct identification). 
+
+Hægt að setja fram í fjórum skrefum:
+
+1) Skilgreina fræðasviðið (define the domain); 
+2) Búa til eða finna mælibreytur; 
+3) Safna gögnum fyrir mælibreyturnar; 
+4) keyra þáttagreiningu til að ákvarða hvaða undirliggjandi breytur eru til staðar. Þetta eru þá undirliggjandi hugsmíðar sviðsins.
+Gott væri að taka dæmi.
+ - Dæmi: Persónuleikaþættir – þar komu fram fimm undirliggjandi þættir fyrir sviðið (sem var þá persónuleiki)
+
+
+### 2. Vinna við smíði mælitækja í sálfræði. 
+
+1) Scale dimensionality – hvaða víddir eru undirliggjandi viðkomandi kvarða. Oft eru sett saman mælitæki úr mörgum atriðum sem er ætlað að mæla eina undirliggjandi hugsmíð. Þáttagreining er mjög heppileg aðferð til að kanna þetta. Með því að keyra þáttagreiningu á mælingum með tilteknum kvarða þá má sjá hvort að um sé að ræða eina undirliggjandi vídd eða hvort víddirnar eru fleiri.
+DÆMI: Þankaþörf (need for cognition) 
+
+2) Þáttagreining veitir mikilvægar upplýsingar um mælifræðilega eiginleika spurningalistans – atriði sem er sterklega undir áhrif frá þættinum sem hefur einnig sterk áhrif á önnur atriði listans sem er ætlað að mæla sömu hugsmíðina bendir sterklega til þess að atriðið sé raunverulega að ná utan um hugsmíðina sem því er ætlað að mæla.
+
+Að sama skapi: Atriði sem hleður lágt á þátt en þátturinn hefur sterk áhrif á önnur atriði sem eiga að mæla tiltekna hugsmíð er væntanlega légleg mæling á hugsmíðinni.
+
+Ennfremur: Ef þegar mismunandi atriði eiga að mæla mismunandi hugsmíðar þá er hægt að nota þáttagreiningu til að meta áhrif allra hugsmíða á öll atriðin. Þannig er hægt að koma auga á atriði sem eru ekki hreinar mælingar á einum þætti – það er þegar fleiri en einn þáttur hefur sterk tengsl við eitt atriði. Út frá þessum upplýsingum má hanna undirkvarða í mælitækinu – þar sem aðeins eru valin atriði sem hlaða sterklega á einn þátt en taka út atriði sem hlaða á fleiri en einn þátt.
+
+## Forsendur þáttagreiningar
+
+### Eiginleikar mældu breytanna:
+
+-	Réttmæti þáttalausnarinnar veltur á því að mælibreyturnar séu lýsandi fyrir það svið sem þeim er ætlað að mæla.
+-	Hversu margar breytur? Yfirleitt mælt með 3-5
+    - Overdetermined er mikilvægt hugtak í þáttagreiningu sem merkir að mikilvægt er að huga vel að 
+    fjölda breyta fyrir hvern þátt á þann hátt að betra er að vera með fleiri en færri breytur fyrir 
+    hvern mældan þátt. Þannig er rétt fyrir rannsakanda sem ætlar sér að vera með fimm breytur fyrir 
+    tiltekinn þátt að vera með fleiri en fimm mældar breytur þegar rannsókninn er hönnuð.
+-	Gæði mældu breytanna – FA virkar betur ef communalities fyrir breyturnar er hátt – ein ástæða fyrir lágu communalities er há mælivilla (random error). Þannig að rétt er að vanda og hafa í huga best practices í spurningagerð.
+-	Kvarði mælinga og dreifing – interval level eða quasi-interval level
+    - Ekki hægt að nota nafnbreytur eða raðbreytur
+    - Muna linearity
+    - Ef við notum Maximum likelihood þá er líka forsenda að breyturnar séu normaldreifðar
+
+### Eiginleikar úrtaksins
+
+-	Hversu stórt þarf úrtakið að vera? 
+    - Allskonar þumalfingursreglur um þetta – stundum miðað við hlutfall milli mældra breyta og þátttakenda (til dæmis, fimm þátttakendur fyrir hverja breytu)
+    - Flestar þessara reglna eru rugl og geta annað hvort valdið því að úrtakið verður ekki nógu stórt til að styðja ályktunartöku á grundvelli þáttagreiningarinnar eða að það verða stærra en þarf og þar með er búið að eyða fjármunum og tíma í óþarfa söfnun gagna
+    - Úrtaksstærð fyrir þáttagreiningu byggir á sömu grundvallarforsendum og úrtaksstærð í öllum öðrum rannsóknum sem eru gerðar í félagsvísindum.
+        - Nauðsynleg úrtaksstærð veltur á þeim mælingum sem á að gera í úrtakinu – sem setur rannsakendur í ákveðinn vanda: Hvernig er hægt að vita hvernig niðurstöðurnar verða þegar ekki er búið að gera rannsóknina?
+        - Þá verður að gera prófanir eða nákvæmar forskoðanir til að skipuleggja gagnasöfnunina og 
+        reyna að leggja mat á hversu stórt úrtak þarf líklega til að fá fram nægilega nákvæmar 
+        niðurstöður. Í það minnsta þarf rannsakandi að reyna eins og kostur er að 
+        - Nokkrar sviðsmyndir:
+            - Optimal conditions: Há communalities (.7) og þættir allir overdetermined (3 – 5
+            mælibreytur per þátt) -> oft dugar úrtak af stærðinni 100
+                - Very well conditioned data - > hugsanlega dugar úrtak af stærðinni 50
+            - Moderately good conditions: Communalities milli .4 og .7 og að minnsta kosti 3 breytur
+            mældar fyrir hvern þátt -> Þá þarf að lágmarki úrtak af stærðinni 200
+            - Poor conditions: Communalities lægri en .4 og sumir þættir aðeins með tvær breytur sem 
+            hlaða á þá -> Að lágmarki þarf úrtak af stærðinni 400 en hugsanlega myndi ekki einu sinni 
+            duga að hafa mjög stórt úrtak.
+    - Auðvitað ættu úrtök alltaf að vera lýsandi fyrir þann hóp sem er ætlast til að það muni lýsa – höfundar segja að það sé í lagi að nota þægindaúrtak. En er það...?
+
+"Convenience samples need not be a problem so long as the biases in the sample are not strongly related to the constructs of interest. Thus, although some university samples might not be appropriate for tests of particular cognitive abilities (e.g., a sample of this sort might be highly nonrepresentative of the population on cognitive abilities such as verbal ability), for other constructs, such as perceptual abilities, a student sample might not be appreciably different from the population as a whole. Hence, researchers should carefully consider the nature of their samples and their relations to the domains of interest. When there is reason to expect that biases may exist in the sample, the results of any factor analysis should always be interpreted with an awareness of how sample homogeneity might have contributed to the results (bls 27.)"
+
+Í sjálfu sér er þetta hárrétt hjá höfundum bókarinnar – en yfirleitt er fjarstæðukennt að ætlast til þess að rannsakendur geti mögulega skoða þessa eiginleika úrtaksins empirískt.
+
+Umfjöllun höfunda um missing data er ábótavant. Til dæmis er aldrei viðeigandi að nota meðaltal sem gildi tilreiknunar fyrir gagnagöt, það bíður upp á bjaga í niðurstöðum. Áhugasömum stúdentum er bent á að kynna sér aðferð sem kallast multiple imputation. Það er aðferð sem byggir á því að gera líkan fyrir gagnagöt í gagnasafni þar sem nýttar eru upplýsingar allra annarra breyta til að búa til trúverðug gildi í stað þeirra sem vantar. Með því að nota MI er ennfremur stjórnað fyrir þann bjaga sem kann að koma fram á mati á dreifni þegar tilreiknun er beitt. Það er gert með því að búin eru til k-fjöldi gagnasafna sem öll eru með mismunandi tilreiknuðu gildi.
+
+Besta bókin er: Flexible imputation of Missing data eftir Stef van Buuren. Svo má líka lesa eitthvað eftir Rubin en þær bækur eru jafnan frekar tæknilegar.
+
+## Leitandi eða staðfestandi þáttagreining
+
+Hægt er að skipta þáttagreiningu í tvennt: Leitandi þáttagreiningu (Exploratory Factor Analysis, EFA) og staðfestandi þáttagreiningu (Confirmatory Factor Analysis; CFA). Þegar um er að ræða leitandi þáttagreiningu hefur rannsakandi ekki neina sérstaka hugmynd um hvaða undirliggjandi þáttabygging er til staðar og lætur kyltu ráða kasti. Þegar um er að ræða staðfestandi þáttagreiningu hefur rannsakandi ákveðnar hugmyndir eða tilgátur um sambandið milli breytanna og hvaða undirliggjandi víddir eru til staðar. Þessar tilgátur eru prófaðar með því gagnasafni sem rannsakandi hefur aðgang að og metið að hvaða marki gögnin og sambandið milli breytanna víkur frá tilgátum rannsakana.
+
+### Hvort á að nota leitandi eða staðfestandi þáttagreiningu?
+
+Veltur að einhverju leyti á því hvort rannsakandi er með tilgátur um hvaða þættir eru til staðar, hvaða breytur hlaða á hvern þátt og hver eru tengslin milli þátta. Sérstaklega er mikilvægt að beita CFA þegar rannsakandi er með nokkur líkön – þá er hægt að keyra CFA fyrir hvert líkan og meta hvert þeirra er með hæstu mátgæðin (fit). Mátgæti er til marks um hversu vel líkanið passar við undirliggjandi gögnin sem CFA er reiknað á. Það líkan sem er með hæst (eða best mátgæði) er þá það líkan sem rannsakandi heldur sig við. Hins vegar ef um er að ræða gríðarlegan fjölda módela sem öll koma til greina – þá er að öllum líkindum betra að keyra EFA. Eins, ef rannsakandi hefur gjörsamlega enga hugmynd um hvaða mun koma út úr þáttagreiningunni.
+
+## Hver er munurinn á þáttagreiningu og meginhlutagreiningu (FA vs PCA)
+
+Oft er gert ráð fyrir að PCA sé ákveðin tegund af FA – en það er ekki rétt.
+
+"PCA essentially involves a model in which a small set of principal components are constructed from the measured variables, and the ability of these components to predict the measured variables is assessed (as indexed by the principal component loadings) (bls. 32.)."
+
+### Þáttagreining
+
+Helstu einkenni í samanburði við meginhlutagreiningu:
+
+ - Aðferð til að skilja strúktúr fylgni milli mældra breyta – hver mæld breyta er línuleg samsetning undirliggjandi þáttarins og unique factor (specific factor og random error)
+
+ - Hægt er að túlka þætti sem undirliggjandi breytur
+
+ - Common factors eru latent constructs sem orsaka mælibreyturnar (samkvæmt kenningunni). Dreifni er skipt í common variance (dreifni sem kemur til vegna þáttanna) og unique variance (sem kemur til vegna áhrifa sem aðeins hafa áhrif á viðkomandi atriði)
+
+### Meginhlutagreining
+
+Ef unnið er með stórt gagnasafn þar sem fylgni er milli breyta þá gerir meginhlutagreining okkur kleyft að taka saman breyturnar í safninu í færri meginhluta sem í sameiningu skýra megnið af dreifingunni í upprunalega gagnasafninu. Meginhlutarnir eru þá lýsandi (representative) breytur fyrir alla dreifni gagnasafnsins. Meginhlutagreining er tækni þar sem hægt er að búa til meginhlutana á grunni gagnasafnsins og nota þá í frekari greiningum. Meginhlutagreining er meðal annars notuð í vélrænu námi sem leitandi leið til að skoða gagnasafn og tengslin sem eru til staðar innan þess. 
+
+Meginhlutagreining eru notuð til að finna leið til að lýsa gögnunum út frá fáum víddum (low-dimensional representation) sem innihalda eins mikið af dreifni gagnasafnsins og hægt er. Hugmyndin er að hver og ein mæling (n) í gagnasafninu eigi sér stað í rými sem er með p-víddum en ekk allar þessara víddar eru jafn áhugaverðar. Meginhlutagreining leitar eftir fáum víddum sem eru eins áhugaverðar og mögulegt er. Í þessu samhengi vísar "áhugaverðar" til þess hversu mikið mælingarnar dreifast eftir hverri vídd. Hver vídd sem greiningin finnur er línuleg samsetning af p-einkennunum. Þannig að í meginhlutagreiningu er takmarkið altaf að reyna að skýra eins mikið af dreifingu gagnasafnsins með fáum meginhlutum. Það er svo gert með því að finna fyrsta meginhlutann í gögnunum sem skýrir eins mikið af dreifingu og hægt er og svo koll af kolli, út frá þeirri forsendu að meginhlutarnir séu hornréttir (orthogonal) miðað við hina meginhlutana, það er, engin fylgni er leyfð milli meginhlutanna en þeirra hlutverk er að safna saman allri dreifni og samdreifni gagnasafnsins.
+
+Helstu einkenni meginhlutagreiningar í samanburði við þáttagreiningu:
+
+ - Hannað til að sjóða niður skor á breytusafni – í sett af færri skorum (sem eru meginhlutarnir). Helsta takmarkið er að taka saman eins mikið og hægt er af dreifni mælibreytanna – en ekki að skýra fylgni milli breytanna. 
+
+ - Ekki er hægt að túlka meginhlutana sem raunverulega latent hugtök – þeir eru einungis til marks um hagkvæma aðferð til að ná utan um eins mikið af upplýsingum sem eru til staðar í mældu breytunum og hægt er. 
+
+ - Meginhlutar eru reiknaðir beint frá mælibreytunum og því innihalda þeir bæði common og unique variance. 
+
+### Af hverju ætti meginhlutagreining að vera notuð frekar en þáttagreining?
+
+Nefnd eru þrjú atriði sem oft eru rædd í samhengi við að PCA sé heppilegri aðferð miðað við FA:
+
+1)	PCA er einfaldari í útreikningi og þarf því ekki eins öflugar tölvur
+
+   - Þetta á klárlega ekki við lengur
+
+2)	Niðurstöður PCA eru jafnan mjög svipaðar niðurstöðum FA á sama gagnasafni
+
+ - Í ýmsum tilvikum er það ekki svo – sérstaklega þegar communalities eru tiltölulega lág (.40 eða lægri) og fáar breytur hlaða á hvern þátt.
+ - Þar sem þetta eru algengar aðstæður í rannsóknum félagsvísinda þá er munurinn milli aðferðanna algengari en halda mætti
+ - Þegar forsendur FA halda – þá eru niðurstöður FA nákvæmari en í PCA. Þegar forsendur PCA (presence of little unique variance) halda, þá eru niðurstöður PCA samt ekki nákvæmari heldur en FA.
+
+3)	Í EFA koma stundum fram Heywood cases (þar sem communality er 1 eða hærra en 1 – conceptually implausible eða impossible estimates)
+
+ - Mikilvægt er að halda því til haga að Heywood case koma fram þegar líkanið hefur verið misspecified (alvarlega) eða gögnin víkja alvarlega frá forsendum common factor líkansins. 
+ - Þess vegna má segja að Heywood case hafi ákveðið greiningargildi það er miklu betra að vita af þeim og geta þá gripið til viðeigandi aðgerða heldur en að vita ekki af þeim og PCA keyrir eins og ekkert hafi komið upp á. PCA leysir semsagt ekki þessi vandamál – hún lítur bara framhjá þeim.
+
+4)	Meginhlutagreining er determinant þar se hægt er að reikna beint skor einstaklings á hverjum meginhluta sem kemur fram – það er ekki hægt fyrir FA þar sem þar er um að ræða latent breytur sem ekki er hægt að reikna gildið beint. 
+
+ - Í þeim tilfellum sem rannsakendur vilja vinna með þættina þá er hægt að gera það innan banda formgerðargreiningar (Structural equation modeling, SEM) – þar er hægt að vinna með þætti sem frum eða fylgibreytur eða sem covariates
+ - Svo eru einnig til aðferðir sem gefa kost á því að gefa mat á þáttabreytunni.
+
+Ennfremur:
+
+-	FA er byggt á prófanlegu líkani, ekki PCA
+     - Þetta er mikilvægt!
+     - Hægt er að reikna þáttalausn út frá gögnum – og meta hversu vel hún hentar gögnunum. Ef mátgæðin eru slök þá þarf að gera breytingar
+-	Hleðslur úr FA er hægt að nota til alhæfingar út fyrir spurningalistann sem verið er að greina – það sama á ekki við um PCA.
+
+"For example, the addition of a new measured variable to a battery alters PCA parameter estimates related to the original measured variables in the battery such as their loadings on the principal components. In contrast, presuming a newly added measured variable does not rely on new common factors that were not present in the original battery, the addition of that measured variable will not change EFA parameter estimates such as factor loadings for the original measured variables in the battery (bls. 34 – 35)."
+
+## Tæknileg framkvæmd þáttagreiningar
+
+Miðað við þær aðferðir sem fjallað hefur verið um hingað til er eitt það helsta sem greinir þáttagreiningu frá öðrum aðferðum er hversu mikið af ákvörðunum rannsakandi þarf að taka meðan á ferli þáttagreiningar stendur. Fáar aðrar aðferðir sem setja jafnmikið á herðar rannsakandans hvarð varðar ákarðanir um tæknileg málefni og þáttagreining – þegar ljóst er að þáttagreining er sú aðferð sem hentar fyrir gögnin sem um ræðir.
+
+Helstu ákvörðunum rannsakendur þurfa að taka afstöðu til má skipta í þrennt:
+
+1) Hvaða aðferð á að nota til að máta líkanið við gögnin þannig að hægt sé að fá mat á stikum líkansins?
+2) Hversu marga þætti á að draga út þegar líaknið er keyrt?
+3) Á að snúa þáttalausninni til að hjálpa til við að túlka niðurstöðurnar og ef svo er, hvaða aðferð á að nota við snúning lausnarinnar?
+
+### Aðferðir til að máta líkanið við gögnin
+
+Til er fjöldi aðferða sem hægt er að nota til að máta líkanið við gögnin. Við getum líst þessu þannig að okkar hlutverk sé að endurskapa gagnasafnið með því að finna réttu stikana sem eru lýsandi fyrir gögnin í gagnasafninu. Í tilfelli þáttagreiningar eru stikarnir til dæmis þáttahleðslurnar og fylgni milli þátta. Með stikana að vopni getum við svo endurgert gagnasafnið okkur og séð þá hversu mikið munar milli þessa endurgerða gagnasafns og upprunalega safnsins. Að sjálfsögðu þarf hér að gæta þess að ofmáta (overfitting) ekki, en þá passar líkanið svo vel við gögnin að alhæfingargildi líkansins tapast algjörlega. Það er, svo mikil áhersla hefur verið lögð á að líkanið passi við gagnasafnið sem um ræðir, með öllum handahófskenndu villum þess og frávikum, að það mun aldrei passa við önnur gagnasöfn sem verða til síðar. 
+
+Þrjár algengar aðferðir eru, sem allar byggja á sama undirliggjandi módelinu, þ.e. common factor model: 
+
+ - NIPA (non-iterative principal axis factor analysis (NIPA factor analysis)). 
+ - Iterated principal axis (IPA) factor analysis
+ - Maximum likelihood factor analysis
+
+#### NIPA
+
+Við höfum áður fjallað um formúluna að baki þáttagreiningu þar sem við gerum ráð fyrir að engin tengsl séu milli þáttanna sem við erum að vinna með:
+
+$P = \Lambda \Lambda^{T}+D_{\Psi}$
+
+Þar sem P er fylgnifylki mældu breytanna í þýði, lambda er fylki þáttahleðsla og D-psi er samdreifnifylki fyrir einstöku þættina. 
+
+Sömu formúlu má setja fram á eftirfarandi máta:
+$P-D_{\Psi} = \Lambda \Lambda^{T}$
+
+Verkefnið sem við stöndum frammi fyrir er að fylla inn í fylkin en vandinn er að við erum með þrjár óþekktar stærðir í þessum útreikningum: P, lambda og D-psi. Til þess að við getum komist eitthvað áfram með líkanagerðina þá verðum við að hafa tvær þessara stærða tiltækar og þannig getum við reiknað okkur að þeirri þriðju.
+
+Fyrsta skrefið í þessari vinnu er að ganga út frá því að úrtaksfylgnifylki mældu breytanna sé góð nálgun við fylgnifylki þýðisins. Við það þá breytist formúlan:
+
+$R \approx \Lambda \Lambda^{T}+D_{\Psi}$
+
+$R-D_{\Psi} \approx \Lambda \Lambda^{T}$
+
+Þar sem R er úrtaksfylgnifylki mældu breytanna. Með þessu losnum við strax við eina óþekkta stærð í jöfnunni. 
+
+Skoðum betur seinni jöfnuna. D-psi er samdreifnifylki fyrir einstakra þátta undir þeirri forsendu að allir einstakir þættir eru ótengdir hverjum öðrum. Þess vegna er skálína þessa fylkis einstaka dreifnin sem tengist hverri mældri breytu en það sem er utan skálínunnar er allt saman núll. Þegar D-psi er dregið frá R þá fáum við fylki þar sem utan skálínu er fylgni milli mældu breytanna og skálínan er þáttaskýring (communality) hverrar og einnar af mældu breytunum (af því að þegar þú dregur einstöku dreifnina frá heildardreifni hverrar mældrar breytu, sem er 1 þegar breytur eru staðlaðar, gefur okkur þáttaskýringuna). Fylkið sem fæst með þessu er kallað reduced correlation matrix. Þannig að, til að geta mátað líkanið við gögnin þá þarf að fá einhverskonar mat á annað hvort einstöku dreifninni eða þáttaskýringunni til að geta haldið áfram. Um leið og það mat liggur fyrir er hægt, á grunni þess, að reikna þáttahleðslurnar.
+
+Ein algengasta leiðin til að ná þessu fram er að reikna squared multiple correlations eða __SMC__. Það mætti þýða sem fjölbreytufylgnikvaðrat eða fjölbreytufylgni í öðru veldi. SMC táknar, fyrir hverju breytu, hlutfall dreifni þeirrar breytu sem er skýrt (accounted for) af öllum öðrum mældum breytum í safninu. Þannig er SMC til marks um hversu mikið af breytileika tiltekinnar breytu er sameiginlegur öðrum breytum í safninu og hægt er að reikna það út frá fylgnifylkinu. SMC er talin vera nokkuð góð nálgun fyrir þáttaskýringu og því eru þau notuð til að fitta þáttalíkaninu.
+
+Í NIPA er markmiðið að leysa:
+
+$R-D_{\Psi} \approx \Lambda \Lambda^{T}$
+
+þar sem fyrsti liðurinn er reduced correlation matrix þar sem atriði utan við skálínu er fylgni meðal mældra breyta í úrtakinu og á skálínunni er fjölbreytufylgnikvaðrat fyrir mældar breytur sem reiknað er á grunni úrtaksins. Með NIPA er algrím keyrt sem finnur mat á þáttahleðslnum í lambda sem komast næst því að endurgera reduced correlation matrix.
+
+Aðferðin gengur meðal annars út á að lágmarka residual matrix sem er reiknað út frá mismuni milli reduced correlation matrix út frá úrtakinu og sama fylki sem er reiknað á grunni NIPA. NIPA finnur þau gildi fyrir lambda sem lágmarka eins og hægt er muninn milli reiknaða (implied) reduced corrlation matrix og þess sem kemur úr gögnunum - það er gert með OLS, ordinary least squares.
+
+Mikilvægt er að muna að yfirleitt eru upprunalegar niðurstöður úr NIPA ekki túlkaðar og ekki unnið með þær frekar. Það er vegna þess að aðferðin gengur eingöngu út á það að finna lausn sem virkar út frá algrímnum og útreikningum. Það er hins vegar ekki þar með sagt að lausnina sé auðvelt að túlka. Þess vegna þarf í flestum, ef ekki öllum tilvikum, að snúa þáttalausninni til að geta túlkað hana.
+
+#### IPA
+Að flestu leyti er IPA eins og NIPA. Munurinn liggur í því að IPA er íteratív sem þýðir að hún er keyrð ítrekað og endurtekið þar til viðunandi lausn hefur fengist.
+
+Hér er ítrun beitt á þann hátt að þegar búið er að meta lambda fylkið (sem er fylgnifylki þáttahleðslanna í lausninni) – meðal annars út frá communalities sem eru reiknuð út frá fylgnifylki allra breyta – þá eru ný communalities reiknuð og þau eru sett inn í reduced correlation matrixuna (sem diagonal elements) og nýtt lambda fylki metið. Þessu er haldið áfram þar til afar lítil breyting verður á hinu nýja lambda fylki sem er reiknað út frá þessum communalities -> þá næst convergence. Það er, þegar communalities úr lambda fylkinu er mjög áþekkar þeim sem voru notaðar sem input inn í ítrunina, þá er sú lausn látin standa og ekki fleiri ítranir keyrðar. 
+
+#### ML
+Maximum likelihood í þáttagreiningu byggir á því að gögnin uppfylli tvær forsendur:
+
+1) Gögnin eru dregin af handahófi úr tilteknu þýði
+2) Fjölbreytunormaldreifing er til staðar í gögnunum. Það þýðir að breyturnar dreifist allar normal og tengslin milli breytanna eru línuleg.
+
+Likelihood function er lykillinn að Maximum likelihood. Hún er tölulegt gildi sem gefur til kynna hlutfallsleg líkindi (relative likelihood) þess að fá gögn af því tagi sem verið er að vinna með út frá parametrum líkansins. 
+
+Með öðrum orðum, hversu líklegt er að vera með gögn af þessu tagi miðað við parametra á borð við þessa? Maximum likelihood estimation býr til parametra sem hafa það að markmiði að hámarka þessa likelihood function – það er, finnur parametra sem gera það mjög líklegt að þessi parametrar hafi búið til gögnin sem eru til staðar.
+
+"...ML attempts to find the set of numerical values for the factor loadings and unique variances (or alternatively and equivalently the communalities) that will produce the largest possible likelihood function and, thus, are the estimates that, given that model, are maximally likely to have produced the data (bls. 47)"
+
+ML hefur marga ákjósanlega eiginleika:
+
+  1) Auðveldara að hámarka aðra function sem er inversely tengd likelihood function – maximum likelihood discrepancy function (FML). Þessi function er alltaf jöfn eða stærri en 0 – því hærri sem hún er því verri eru mátgæðin. Léleg mátgæði eru til marks um að ólíklegt er að gögn af þessu tagi hafi komið fram miðað við stikamatið sem er lagt til grundvallar. ML reynir að nálgast 0 og finna stikamat sem eru eins nærri núlli og hægt er.
+  2) ML byggir á ítrekun (iteration). Aðferðin byrjar á tilteknu mati fyrir þáttaskýringu (oftast SMC) og fyrsta þáttalausn byggir á því. Fyrsta lausnin er reiknuð með svipuðum identification condictions of NIPA og IPA til að hægt sé að fá fram einstakri þáttalausn. Í hverri ítrun reiknar ML algrímið nýtt stikamat til að minnka enn frekar stærð ML discrepancy function. Það er, í hverru ítrun er það markmið algrímsins að finna stikamat sem eru líklegri til að búa til gögnin en það sem kom fram í síðustu ítrun . Ítrunum er hætt þegar breytingar á discrepancy functioninni eru lægri en áður ákvarðað viðmið.
+  3) Eftir samleitni (convergence) þá koma fram lokaniðurstöður ML stikamatsins þáttahleðslur og einstaka dreifni  - eða þáttaskýringu. Ef allt hefur gengið að óskum þá eru í þessari lausn stikar sem eru rosa líklegir til að hafa búið til gögnin. Engir aðrir stikar fyrir þetta líkan eru líklegri til að hafa búið til gögnin. En, eins og í IPA og NIPA þá eru niðurstöðurnar yfirleitt ekki túlkaðar fyrr en búið er að snúa lausninni – enda er snúningurinn jafnan gerður til að fá fram auðtúlkanlegri lausn. 
+Kostur við ML (þó niðurstöðurnar séu oft svipaða IPA og NIPA) er kí-kvaðrat próf fyrir módel fit (mátgæði líkansins) – likelihood ratio test statistic. Prófið er mæling á mátgæðum líkansins og prófar formlega núlltilgátuna að common factor model með m þáttum haldi fullkomlega í þýðinu (það er, að líkanið og gögnin víki ekki hvort frá öðru). Marktækt próf bendir til þess að tilgátunni hafi verið hafnað og líkanið passi ekki fulkomlega í þýðinu. En af því að prófið leggur nokkuð strangar kvaðir (fullkomið samræmi er ósennilegt) og er næmt fyrir úrtaksstærð eins og öll marktektarpróf þá er það sjaldnast birt eitt og sér heldur eru aðrar mælingar á mátgæðum einnig notuð, descriptive fit indices. Þessum mælingum er ætlað magnbinda hversu miklu munar milli gagnanna og líkansins – í stað þess að vera aðeins með tvíkosta dóm um það.
+
+Eitt dæmi er RMSEA (root mean square error of approximation: Mæling á því hversu mikið ósamræmi er milli líkansins og gagnanna miðað við frígráður módelsins. Stór gildi benda til verri mátgæða – núll eru fullkomin mátgæði. Yfirleitt er RMSEA < .08 talið vera viðundandi fit. RMSEA virkar vel í að koma auga á illa skilgreind (mis-specified) líkön.
+
+"In general, because of the additional information provided by ML, ML is preferable to IPA and NIPA in most contexts. So long as non-normality is not severe and/or there is no reason to expect substantively important weak common factors, the additional information provided by ML will probably outweigh its drawbacks. That being said, even in these contexts, it is always prudent to examine the IPA solution as well as the ML solution to confirm that the procedures produce comparable results. Substantial differences between the procedures can serve to highlight the need for the researcher to further consider the model being fit and the properties of the data (bls. 53)."
+
+
+### Fjöldi þátta sem verða dregnir út.
+
+Þrátt fyrir að sú þáttagreining sem við fjöllum um er kölluð leitandi þáttagreining, þá er það samt svo að rannsakandi þarf að taka ákvörðun um hversu marga þætti hann ætlar að draga út.
+
+Error of approximation: Í hvert sinn sem common factor líkanun er fittað við úrtaksgögn þá er ólíklegt að gögnin passi fullkomlega. Ein ástæða þess er sampling error (villa sem kemur til vegna þess að fylgni sem er reiknuð frá hvaða úrtaki sem er er ólíkleg til að vera hin nákvæmlega sama fylgnistuðlar meðal mældra breyta í þýðinu. Og jafnvel þó við værum með population correlation matrix tiltækan þá er óraunhæft að ætla að hver of einn „comparatively parsimonious common factor model (i.e., a model with substantially fewer common factors than measured variables) will fit perfectly (pp. 54).“ Skortur á mátgæðum kemur mögulega til vegna nonlinear áhrifa common factoranna á mældu breyturnar og upplýsingar minor common factors sem ekki er hægt að representera í parsimonious líkani. Skortur á mátgæðum vegna vankannta á módelinu af þessu tagi eru kallaðir error of approximation. 
+"Ideally, the number of major common factors is that number of common factors for a model in which: 
+(1) the model does a good job accounting for the correlations among the measured variables, 
+(2) a model with one fewer common factors would do substantially worse in accounting for the correlations, 
+(3) a model in with one more common factor would not do appreciably better in explaining the correlations, and 
+(4) all common factors in the model are readily interpretable and can be related to constructs of theoretical utility to the domain of interest (bls. 54 – 55)."
+
+Hvaða aðferðum er hægt að beita til að ákvarða fjölda þátta í þáttalausninni:
+
+-	Eigingildi hærri en einn
+    - Viðmið Kaisers
+    - Þá eru eigingildi reiknuð frá unreduced correlation matrix eða reduced correlation matrix og
+    einfaldlega skoða hversu mörg eigingildi eru hærri en 1.
+    - Kosturinn er að þetta er einföld leið sem auðvelt er að útskýra og framfylgja
+    - Það eru hins vegar nokkrir ókostir: 
+        -  Var upphaflega sett fram sem regla fyrir unreduced correlation matrix í PCA og á því
+        eiginlega ekki við fyrir EFA 
+        - Þessi regla er mjög arbitrary – af hverju eigenvalue sem er 1.01 en ekki 0.99?
+        - Rannsóknir hafa bent til þess að viðmið Kaisers geti bæði leitt til 
+            - overfactoring (þ.e. að draga út fleiri þætti en eru til staðar í þýðinu) 
+            - underfactoring (þ.e. að draga úr færri þætti heldur en í simulated population). 
+-	Skriðupróf (scree test)
+    - Þá er teiknað myndrit þar sem eigingildi allra þáttanna er sett fram í lækkandi röð
+    - Fjöldi þátta sem er dreginn úr í lausninni er þá fjöldi eigingilda sem koma fram fyrir síðustu stóru skriðuna í myndritinu
+    - Hins vegar er ekki alltaf ljóst hvaða eigingildi ætti að teikna upp
+      - Í leitandi þáttagreiningu: Skynsamlegra að plotta eigingildi úr reduced matrix þar sem það eru
+      eigenvalues sem eru tengdari common þáttunum sem verða dregnir út í þáttalausninni
+      - Hins vegar þegar PCA er framkvæmd þá er skynsamlegra að nota eigenvalues úr sample correlation
+      maxtrix.
+      - Þetta er hins vegar alls ekki alltaf svona í tölfræðihugbúnaði. Í R pakkanum psych má finna 
+      function sem nefnist scree – þá er teiknað upp scree próf þar sem borið er saman hversu marga 
+      þætti vs. meginhluta ætti að velja. 
+      
+Skriðupróf fyrir PCA og þáttagreiningu má sjá í mynd \@ref(fig:skriduprof)
+
+```{r, echo = FALSE, warning=FALSE, message=FALSE}
+library(psych)
+library(foreign)
+
+gogn <- read_sav("~/Tölfræði III/tolfr3/timaglosur/FactBeer.sav")
+gogn2 <- gogn[complete.cases(gogn),]
+```
+
+      
+```{r, echo = FALSE, warning=FALSE, message=FALSE, skriduprof, fig.cap = "Skriðupróf bjórskala"}
+
+scree(gogn2[,1:7])
+
+
+```
+
+-	Samhliðagreining (parallel analysis)
+    - Greining sem byggir á samanburði milli eigenvalues sem koma úr úrtaksgögnum með eigenvalues úr algjörlega random gögnum.
+    - Aðferðin byggir á þeirri hugmynd að m- stærstu eigenvalues úr reduced correlation matrix ætti að vera umtalsvert stærri heldur en m stærstu eigenvalues úr corresponding setti handahófskenndra gagna (handahófskennt gagnasafn með af sömu stærð og með sama fjölda mælibreyta).
+    - Viðeigandi fjöldi common þátta er fjöldi eigenvalues sem eru stærri en corresponding eigenvalues úr random gögnum.
+    
+Skriðupróf fyrir PCA og þáttagreiningu má sjá í mynd \@ref(fig:samhlidagreining)
+
+```{r, echo = FALSE, warning=FALSE, message=FALSE, samhlidagreining,fig.cap = "Samhliðagreining bjórskala", comment=FALSE}
+
+fa.parallel(gogn2[,1:7], fa = "fa", )
+
+
+```
+
+
+-	Likelihodd ratio test
+    - Hægt að nota þegar um er að ræða ML
+    - Þá er hægt að reikna fleiri en eina þáttalausn, með mismörgum þáttum og kanna hver er með hæstu mátgæðin, samkvæmt kíkvaðrat.
+    - Hægt að vinna þessa umræðu lengra með því að búa til difference test (sem vill svo heppilega til að dreifist líka samkvæmt kí-kvaðrat) og þá er hægt að meta hvort fleiri eða færri þættir skili marktækri bætingu á mátgæðum.
+-	Model fit indices
+    - Samskonar hugmynd hér að baki og við að nota likelihood ratio test
+-	Stability of solutions
+    - Ef um er að ræða tvö eða fleiri gagnasöfn eða hægt er að skipta gagnasafni rannsóknarinnar í tvo eða fleiri hluta
+    - Þá er hægt að skoðu stöðugleika lausnarinnar yfir mismunandi gagnasöfn.
+-	Interpretability of solutions
+    - Þáttagreining meikar bara sens ef hægt er að túlka endanlega þáttalausn
+    - Þannig að – ef of margir eða of fáir þættir sem hamla túlkun þáttalausnarinnar þá er það til marks um að fleiri (eða færri) þættir ættu að vera dregnir út.
+
+### Þáttasnúningur
+
+#### Einföld formgerð (simple structure)
+
+Helsta ástæða þess að nauðsynlegt er að snúa upprunalegu þáttalausninni er að einfalda túlkun og auka skýrleika þáttalausnarinnar. Mikilvægt er að hafa í huga að með snúningi þáttalausnarinnar er ekki verið að eiga við niðurstöðurnar, per se, heldur frekar að breyta því hvar undirliggjandi þættirnir lenda með tilliti til mældu breytanna. Það sem rannsakendur eru að leita eftir er það sem nefnt hefur verið einföld formgerð (simple structure) sem er safn einkenna á þáttalausn sem eru eftirsóknarverð. Í einfaldri formgerð koma fram þrenns konar almennir eiginleikar einfaldrar formgerðar:
+
+ - Á hvern þátt hlaða ákveðnar mældar breytur með háum hleðslum en aðrar breytur hafa lágar þáttahleðslur
+      - Það er semsagt eftirsóknarvert að vera með sundurgreiningu hleðsla á þáttunum.
+      - Eðli málsins viltu að þær breytur sem eru með sterkustu tengslin við undirliggjandi þáttinn hafi háar hleðslur en aðrar mældar breytur hlaða veikar á þátinn 
+ - Mældar breytur sem hlaða á mismunandi þætti ættu ekki að skarast nema að litlu leyti
+      - Ekki er æskilegt að sömu breyturnar hlaði á alla þættina, sérstaklega ekki sterklega þar sem þá er sundurgreining þáttanna lítil sem engin.
+ - Hver mæld breyta æti aðeins að vera undir áhrifa frá hlutmengi þátta.
+      - Það er, þú vilt ekki hafa þáttalausn þar sem allir þættir hlaða á allar mældar breytur.
+
+Upphaflega hugmyndin um einfalda formgerð kemur frá Thurstone (1947) og var hún þá sett fram sem fimm almennar leiðsagnarreglur:
+
+1) Hver röð (það er, hver mæld breyta) í þátthleðslufylkinu á að innihalda að minnsta kosti eitt núll (eða gildi sem er mjög nálægt núlli).
+2) Hver dálkur (það er, hver þáttur) ætti að innihalda að minnsta kosti m núll gildi – eða m gildi sem eru mjög nálægt núlli (þar sem m er til marks um fjölda þátta í lausninni). 
+3) Hverjir tveir dálkar í þáttahleðslufylkinu (það er, hvert par þátta) ættu að hafa nokkrar raðir með núll eða gildum sem eru nærri núlli í einum dálknum en ekki í öðrum.
+4) Í tilvikum þar sem m er fjórir eða meira, þá ætti hvert par dálka í þáttahleðslufylkinu að hafa nokkrar raðir með núlli eða gildi sem er nærri núlli í báðum dálkum.
+5) Hvert par af dálkum í þáttahleðslufylkinu ætti að hafa aðeins fáar ráðir af hleðslum sem ekki eru núll í báðum dálkum.
+
+Ef um er að ræða þáttalausn sem uppfyllir vel þessi skilyrði þá er hún, miðað við aðrar mögulegar þáttalausnir:
+  - auðtúlkanlegri
+  - merkingarbærari hvað varðar hugsmíðirnar sem verið er að mæla
+  - líklegri til að koma ítrekað fram í frekari rannsóknum innan viðkomandi fræðasviðs
+  
+Þess vegna er það markmið rannsakenda (að mati Thurstones) að snúa ásum upphaflegu þáttalausnarinnar til að hámarka einfalda formgerð og byggja greiningu sína og túlkun á niðurstöðum þessarar snúnu lausnar.
+
+Mikilvægt er að átta sig á því að leiðbeiningar Thurstones segja ekki að hver mæld breyta eigi aðeins að hlaða á einn þátt (sérstaklega þegar um er að að ræða þáttalausn með þremur eða fleiri þáttum). Það sem leiðsagnarreglur Thurstones segja hins vegar er að mæld breyta eigi ekki að hlaða á alla þættina. Í mörgum tilfellum er hægt að gera ráð fyrir að mæld breyta sé undir áhrifum fleiri en eins þáttar í þáttalausninni.
+
+  - Ef um er að ræða þáttalausn þar sem hver mæld breyta hleður aðeins á einn þátt þá nefnist það independent cluster solution. Slík lausn er sérstakt tilvik um einfalda formgerð en ekki eina tilvikið þar sem um er að ræða einfalda formgerð.
+
+#### Þegar þáttum er snúið
+
+Mikilvægt er að hafa hugfast að þegar þáttagreining er keurð þá eru til endalaust magn af jafngóðum lausnum fyrir niðurstöðurnar. Þess vegna er það nokkurn veginn undir hælinn lagt hvaða niðurstaða kemur fram þegar upprunalega þáttagreiningin er keyrð. Að minnsta kosti er ekkert sem passar upp á að niðurstöðurnar séu til marks um einfalda formgerð. Þess vegna beitum við snúningi á þáttalausnina, til að tryggja að lausnin sem við endum með einkennist af einfaldri formgerð.
+
+##### Rúmfræðileg framsetning þáttagreiningar
+
+Oft er þægilegra að skilja þáttagreiningu, og þá sérstaklega þáttasnúning, með því að setja líkanið fram á rúmfræðilegu formi (spatial representation). Þá er hægt að skoða niðurstöðurnar í tvívíðu rými þar sem þættirnir eru til marks um víddir eða ásana í rýminu og þáttahleðslurnar (aka vogtölurnar) eru til marks um hnit mældu breytanna í rýminu. Dæmi um þessa framsetningu má sjá í mynd \@ref(fig:osnuinlausn) þar sem sjá má rúmfræðilega framsetningu á tveggja þátta lausn af ávarðanatöku bjórkaupenda. Í myndinni er um að ræða tvo þætti (sem ekki er búið að snúa) sem báðir tengjast því hvað skiptir neytendur máli þegar ákvörðun er tekinu um kaup á bjórkippu, annars vegar er það þátturinn hagkvæmni og hins vegar þátturinn bjórsnobb. Þegar myndir af þessu tagi eru túlkaðar er fjarlægðin milli mældu breytanna skoðuð. Þar sem um er að ræða háa, jákvæða fylgni milli breyta þá eru þær nærri hvor annarri. Þegar um er að ræða neikvæða fylgni þá er lengri fjarlægð milli breytanna í hnitakerfinu. 
+
+Eins og sjá má á myndinni mætti sjá fyrir sér að hægt væri að einfalda formgerðina með því að beita þáttasnúningi.
+
+```{r, echo = FALSE, warning=FALSE, message=FALSE, osnuinlausn, fig.cap = "Ósnúin lausn"}
+
+bjor.fa.none <- factanal(gogn2[c(1:7)], factors = 2, rotation = "none")
+bjor.fa.varimax <- factanal(gogn2[c(1:7)], factors = 2, rotation = "varimax")
+bjor.fa.promax <- factanal(gogn2[c(1:7)], factors = 2, rotation = "oblimin")
+
+plot(bjor.fa.none$loadings[,1], 
+     bjor.fa.none$loadings[,2],
+     xlab = "Hagvkvæmni", 
+     ylab = "Bjórnsnobb", 
+     ylim = c(-1,1),
+     xlim = c(-1,1),
+     main = "Engin snúningur")
+abline(h = 0, v = 0)
+
+
+```
+
+Mátgæði líkansins felast í því að hvaða marki rýmisleg fjarlægð milli mældu breytanna getur á nákvæman hátt endurgert (reconstruct) hina mældu fylgni milli mældu breytanna (observed correlations among measured variables). Ef þessi endurgerð er ónákvæm þá getur það kallað á flóknara líkan – það er, að nota frekar þrjár víddir sem merkir þá að þriggja þátta líkan gæti virkað betur en tveggja þátta.
+
+Mikilvægt atriði er að það hversu vel rýmisleg uppsetning getur gert grein fyrir mældri fylgni veltur ekki á nokkurn hátt á víddunum tveimur sem eru teiknaðar á myndinni. Það er, við getum snúið víddunum hvernig sem við viljum og sú framsetning myndi virka jafn vel til að skýra fylgnina. Snúningur víddanna myndi krefjast þess að ný hnit yrðu reiknuð (það er, þáttahleðslur) sem væru til marks um nýja staðsetningu víddanna (ásanna). En þessi hnit væru alveg jafngóð og hin fyrri við að skýra gögnin. Það er, snúningur víddanna myndi ekki breyta grundvallar fjarlægðinni í tvívíðu rúmi sem eru notaðar til að tákna og meta fylgni milli mældu breytanna. 
+
+Ein áskorun EFA er að ákvarða hvaða snúningur þáttanna er heppilegastur. Það er, hvaða lausn eigum við að velja úr þessum endalausa fjölda lausna sem allar passa jafn vel. Til að þáttagreining gangi upp eru í upphafi settar fram ákveðin skilyrði þannig að lausnin uppfylli tiltekin stærðfræðilegar forsendur. Þessar forsendur verða aðeins uppfylltar með ákveðnum snúningi lausnarinnar. Þessi lausn er aðeins valin til að hægt sé að ljúka þáttagreiningunni en mikilvægt er að valin verði lausn sem er til marks um einfalda formgerð.
+
+##### Tegundir snúninga
+
+Í fyrstu voru snúningar unnir í höndunum út frá myndrænni birtingu þáttalausnarinnar en í kringum 1950 voru rannsakendur byrjaðir að snúa þáttalausn með sjálfvirkum aðferðum. Slíkar aðferðir skiptast í tvennt: Hornréttan (orthogonal) og hornskakkan (oblique) snúning.
+
+__Hornréttur snúningur__ byggja á því að engin fylgni er leyfð milli þáttana þegar þeim er snúið. Í rúmfræðilegri lausn merkir þetta að passað sé upp á að hornið milli þáttanna þarf alltaf að vera 90°. Þaðan kemur nafnið. Dæmi um aðferðir sem falla undir yfirheitið hornskakkur þáttasnúningur eru:
+
+  -	quartimax
+  -	varimax
+
+Í mynd \@ref(fig:hornrettlausn) má sjá þegar bjórkvarðanum hefur verið snúið með hornréttum Varimax snúningi. Eins og sjá má á myndinni þá skera ásar þáttanna betur í gegnum sett mældu breytanna heldur en þegar um var að ræða ósnúna þáttalausn. 
+
+```{r, echo = FALSE, warning=FALSE, message=FALSE, hornrettlausn, fig.cap = "Snúin, hornrétt lausn"}
+
+plot(bjor.fa.varimax$loadings[,1], 
+     bjor.fa.varimax$loadings[,2],
+     xlab = "Hagkvæmni", 
+     ylab = "Bjórsnobb", 
+     ylim = c(-1,1),
+     xlim = c(-1,1),
+     main = "Hornréttur varimax snúningur")
+
+text(bjor.fa.varimax$loadings[,1]-0.08, 
+     bjor.fa.varimax$loadings[,2]+0.08,
+      colnames(gogn2[c(1:7)]),
+      col="blue")
+abline(h = 0, v = 0)
+
+```
+
+__Hornréttur snúningur__ byggir á þeirri forsendu að fylgni milli þátta er leyfð. Oft þegar leitandi þáttagreiningu er beitt er tiltölulega sterkur fræðilegur grundvöllur fyrir því að fylgni milli þátta sé leyfði. Stundum er það meiraðsegja svo að rannsakendur hafa sérstakan fræðilegan áhuga á því að skoða sérstaklega fylgni milli þátta auk þess sem mynstur milli þeirra getur gefið mikilvægar upplýsingar um eðli þeirra, til dæmis að hvaða marki aðgreining milli mismunandi þátta er sterk eða veik.
+
+Rétt eins og fyrir hornréttan snúning þá kemur nafngiftin fyrir hornskakkan snúning úr því að skoða þáttalausn í rúmfræðilegri framsetningu hennar, þegar fylgni er leyfð milli þátta þá er horninu milli þáttavíddanna leyft að vera hvasst eða gleitt, allt eftir því hvort um er að ræða mikla eða litla fylgni milli þáttanna. Þannig verður hornið hvassara (lægra en 90° og færist nær 0°) eftir því sem fylgnin milli þáttanna er meiri.
+
+Meðal mismunandi tegunda hornskakkra snúninga eru:
+
+  -	Promax
+  -	Harris-Kaiser/Orthoblique rotaion
+      - Parameter – HK power
+          - HKP= 1, varimat
+          - HKP=0,5 = Oblique roation
+          - HKP = 0, oblique rotation sem leitar að independent cluster solution
+  -	Direct quartimin
+  - Direct olibmin
+
+Í mynd \@ref(fig:hornskokklausn) má sjá þegar bjórkvarðanum hefur verið snúið með hornskökkum promax snúningi. Eins og sjá má á myndinni þá skera ásar þáttanna enn betur í gegnum sett mældu breytanna heldur en í fyrri tveimr lausnunum.
+
+
+```{r, echo = FALSE, warning=FALSE, message=FALSE, hornskokkausn, fig.cap = "Snúin, hornskökk lausn"}
+
+plot(bjor.fa.promax$loadings[,1], 
+     bjor.fa.promax$loadings[,2],
+     xlab = "Hagkvæmni", 
+     ylab = "Bjórsnobb", 
+     ylim = c(-1,1),
+     xlim = c(-1,1),
+     main = "Hornskakkur direct oblimin snúningur")
+
+text(bjor.fa.promax$loadings[,1]-0.08, 
+     bjor.fa.promax$loadings[,2]+0.08,
+      colnames(gogn2[c(1:7)]),
+      col="blue")
+abline(h = 0, v = 0)
+
+
+```
+
+
+Til þess að glöggva okkur enn frekar á niðurstöðunum getum við skoðað hleðslur allra þriggja þáttalausnanna til að meta hver þessara þriggja lausna sé næst því að vera af einfaldari formgerð. Þetta má sjá fyrir þátt 1 sem kemur fram í töflu \@ref(tab:samanbthatt1) og í töflu \@ref(tab:samanbthatt2) fyrir þátt 2. Í þessu dæmi er sáralítill munur á hornskakkri og hornréttti þáttalausn og vart má á milli sjá hvor þeirra skilar einfaldari formgerð.
+
+
+```{r, echo = FALSE, warning=FALSE, message=FALSE, samanbthatt1}
+
+nonloadings =as.data.frame(as.vector(bjor.fa.none$loadings))
+hornrloadings =as.data.frame(as.vector(bjor.fa.varimax$loadings))
+hornsloadings =as.data.frame(as.vector(bjor.fa.promax$loadings))
+
+hledslusamanburdur = cbind(nonloadings, hornrloadings,hornsloadings)
+
+hledslusamanburdur$breytur = c("COST", "SIZE", "ALCHOLOL", "REPUTAT", "COLOR", "AROMA", "TASTE")
+
+names(hledslusamanburdur) = c("Osnuin","Hornrett","Hornskokk", "Breyta")
+
+hledslusamanburdur = hledslusamanburdur[c(4,1,2,3)]
+
+cor.table <- xtable(hledslusamanburdur[c(1:7),])
+knitr::kable(cor.table
+             , digits = 2
+             , caption = "Samanburður á þáttaleðslum þáttarins hagkvæmni í bjórkaupum fyrir ósnúna þáttalausn, hornrétta lausn og hornskakka lausn. ")
+
+
+```
+
+
+
+```{r, echo = FALSE, warning=FALSE, message=FALSE, samanbthatt2}
+
+nonloadings =as.data.frame(as.vector(bjor.fa.none$loadings))
+hornrloadings =as.data.frame(as.vector(bjor.fa.varimax$loadings))
+hornsloadings =as.data.frame(as.vector(bjor.fa.promax$loadings))
+
+hledslusamanburdur = cbind(nonloadings, hornrloadings,hornsloadings)
+
+hledslusamanburdur$breytur = c("COST", "SIZE", "ALCHOLOL", "REPUTAT", "COLOR", "AROMA", "TASTE")
+
+names(hledslusamanburdur) = c("Osnuin","Hornrett","Hornskokk", "Breyta")
+
+hledslusamanburdur = hledslusamanburdur[c(4,1,2,3)]
+
+cor.table <- xtable(hledslusamanburdur[c(8:14),])
+knitr::kable(cor.table
+             , digits = 2
+             , caption = "Samanburður á þáttaleðslum þáttarins snobb í bjórkaupum fyrir ósnúna þáttalausn, hornrétta lausn og hornskakka lausn. ")
+
+```
+
+
+##### Hornskakkur eða hornréttur snúningur?
+
+Ákveðin hefð skapaðist fyrr á tímum fyrir að nota hornréttan snúning í leitandi þáttagreiningu en sú hefð varð að miklu leyti til vegna misskilnings. Ljóst er að hornskakkar aðfeðrir við þáttasnúning eru mun skynsamlegri. Helstu ástæður þess að hornréttur snúningur átti meiri vinsældum að fagna heldur en hornskakkur snúningur eru: 
+
+  1) Af því að það tók langan tíma til að finna viðunandi hornskakkar snúningsaðferðir en hornréttar hafa lengi, lengi verið til. Þá getur verið að menn hafi einfaldlega verið að nota aðferð sem hafi verið notuð áður. 
+
+  2) Ýmis konar misskilningur hefur valdið því að hornréttur snúningur væri heppilegri
+
+  a) Talið var að hornskakkur snúningur annað hvort krefðist þess að fylgni sé til staðar milli þáttanna eða valdi því að fylgni komi fram. Það er rangt – hornskakkur snúningur leyfir einfaldlega að það sé fylgni til staðar. Hún er almennari aðferð til snúnings sem leyfir bæði tengda og ótengda þætti. Ef engin fylgni er til staðar, þá verða niðurstöður afar svipaðar hvort sem hornréttum eða hornskökkum snúningi var beitt.
+    
+  b) Hugmyndir um að hornréttur snúningur sé á einhvern hátt einfaldari og þess vegna muni þær frekar leiða til einfaldrar formgerðar miðað við hornskakkan. Hins vegar er það andstæða rétt – þegar undirliggjandi þættirnir hafa fylgni sín á milli þá mun hornskakkur snúningur frekar leiða til einfaldrar formgerðar. Þetta má sjá á mjög skýran hátt á bls. 76 í F&W, mynd 3.4 og á blaðsíðu 77, mynd 3.5.
+
+  c) Ef rannsakendur telja að þættirnir eigi að vera ótengdir eða vill að þeir séu ótengdir þá muni hornréttur snúningur á einhvern hátt uppfylla þetta markmið. Hins vegar ef þættirnir eru raunverulega tengdir þá mun snúningur sem gengur út frá því að þeir séu ótengdir ekki breyta þessari staðreynd. __Forsendur líkana breyta ekki gögnunum!__
+
+"...oblique rotation is generally a more sensible approach than orthogonal rotation. Oblique rotations will often be a more realistic representation of the data, will provide a solution that allows for easier interpretation, and will give the researcher additional information not available in orthogonal rotations (i.e.,the correlations among common factors). (Fabrigar og Wegener, 2012, bls. 78)" 
+
+
+##### Túlkun snúinnar þáttalausnar
+
+1) Skölunarátt (scaling direction) á þáttum er arbitrary. Það skiptir semsagt ekki máli hvort um er að ræða jákvæðar eða neikvæðar hleðslur á þáttinn. Fyrir tiltekna þáttalausn þá er semsagt í lagi að snúa formerkjum þáttahleðsla fyrir allar þáttahleðslur í tilteknum dálki þáttahleðslufylkisins. Slíkt (af því gefnu að þær séu gerðar fyrir öll element í dálknum) hafa ekki áhrif á mátgæði líkansins eða communalities fyrir mældar breytur. 
+
+2) Röð þáttanna eftir snúning er jafnan arbitrary. Þrátt fyrir að röð þáttanna í upprunalegri lausn hafi ákveðna merkingu (sá þáttur sem skýrir mest af dreifingu mældu breytanna, þ.e. hefur hæsta eigenvalue) er dreginn út fyrstur og svo koll af kolli, þá er það ekki nauðsynlega svo eftir snúning.
+
+Munur milli hornréttrar og hornskakkrar lausnar:
+
+1) Túlkun
+-	Þáttahleðslur hornréttrar lausnar má túlka sem fylgni milli þáttarins og mældu breytunnar – eru milli -1 og 1 og skýrða dreifni má reikna með því að setja hleðsluna í annað veldi. 
+-	Í hornskakkri lausn er ekki lengur um að ræða staðlaðan stuðul sem hægt er að túlka sem fylgni – heldur eru hleðslurnar sambærilegar við standardized partial regression coefficients. Þær eru til marks um staðlaða breytingu í mældu breytunni þegar um er að ræða einnar einingar aukningu í þættinum þegar búið er að stjórna fyrir (partial out) áhrifum allra annarra þátta í líkaninu. Geta því verið utan marka -1 og 1 (þó það sé sjaldgæft) og ekki er hægt að setja þá í annað veldi.
+-	Factor correlation matrix sýnir fylgni milli þátta og er því fí fylkið sem áður hefur verið talað um.
+
+2) Töflur
+  -	Í hornréttum snúningi verður til ein tafla með snúnum þáttahleðslum.
+  -	Forrit sýna hins vegar oft þrjár töflur þegar hornskökkum snúningur hefur verið beitt: Pattern matrix, structure matrix og factor correlation matrix. 
+      - Pattern matrix: Lamda, það er, snúið fylki þáttahleðslna
+          - "...the pattern matrix should be the primary basis for interpreting factors. It is these values that are the actual parameter estimates of the factor loading matrix in the common factor model. (Fabrigar og Wegener, 2012, bls. 81)."
+      - Structure matrix: Zero order correlations milli þáttanna og mældra breyta (fylgni milli hvers þáttar og mældu breytanna án þess að stjórna fyrir áhrifa annarra þátta í líkaninu) Inniheldur ekki parameter estimates fyrir lambda né hefur þessum gildum verið snúið fyrir einfalda formgerð.
+      - factor correlation matrix er tafla þar sem fram koma fylgnistuðlar fyrir tengsl milli þáttanna í líkaninu.
+      
+## Nokkur fleiri orð um forsendur þáttagreiningar
+
+### Forsendur sem eru undirliggjandi þáttalíkaninu (common factor model)
+
+#### Effects indicators vs. causal indicators
+
+Í þáttagreiningu er gert ráð fyrir að skor á hverri mældri breytu í safni mældra breyta komi til vegna áhrifa undirliggjandi þáttar (common factor) og vegna áhrifa sem aðeins hafa áhrif á viðkomandi breytu (unique factor). Gert er ráð fyrir að þættirnir hafi línuleg orsakaáhrif á mældar breytur - > effects indicator models. Mældar breytur eru semsagt indicatorar fyrir undirliggjandi þættir – þær eru áhrif þeirra. 
+
+Þetta meikar fullkomið sens fyrir ákveðnar breytur, eins og viðhorfamælingar, mælingar á greind og persónuleikamælingar. Hins vegar meikar þetta ekkert sens fyrir ýmsar aðrar mælingar og því kann að vera skynsamlegra (conceptually) að setja fram orsakasamband í hina áttina -> causal indicators models – það er, mældu breyturnar eru orsakavaldar hinna undirliggjandi vídda. Dæmi úr bókinni er SES, sem er oft metið með því að sameina ýmsar mælingar á borð við menntun, occupational prestige og innkomu. Eins og gefur að skilja er það óskiljanlegt að setja það fram svoleiðis að SES valdi því hvernig viðkomandi hefur menntað sig, tekjur hans og starf.
+
+Causal indicator models byggja ekki á því að mældar breytur í batteríi ættu að hafa háa innbyrðis fylgni. Módel af þessu tagi leyfa jafnan indicatorum að hafa innbyrðis fylgni en indicatorarnir sjálfir ættu aðeins að hafa fylgni innbyrðis að því marki sem þeir deila common antecedents. Þar sem engir antacedents eru tilgreindir í líkaninu þá er sá möguleiki opinn að indicatorarnir hafi fáa, ef einhverja sameiginlega antecedents. 
+
+EFA á aðeins við þar sem um er að ræða effects indicator model – það er, þar sem rannsakandi getur gengið út frá því að slíkt líkan haldi. Þess vegna þarf alltaf, áður en ráðist er í að framkvæma EFA, að ákvarða hversu sennilegt það er að effects indicator model sé til staðar í rannsókninni sem viðkomandi stendur fyrir.
+
+"If the sorts of constructs that are expected can be reasonably postulated to cause scores on measured variables, then EFA might well be a viable method of analysis. On the other hand, if a causal indicator model is more plausible, EFA should not be used. At the empirical level, there are really no clear exploratory methods for researchers to gauge the plausibility of their assumption of an eff ects indicator model in the context of EFA (although tests have been proposed for confirmatory latent variable models, see Bollen & Ting, 2000). Strong correlations among all measured variables or subsets of measured variables within a battery are certainly consistent with an eff ects indicator model. However, as noted, causal indicator models do not preclude high correlations among measured variables. (pp. 92)"
+
+#### Línuleg eða ólínuleg áhrif þátta
+
+Önnur lykilforsenda þáttagreiningar er að þættirnir hafi línuleg áhrif á mældar breytur -> mældar breytur eru til marks um vigtaða línulega sameiningu þáttanna sem eru undirliggjandi öllum mælibreytunum og unique factor.
+
+Þetta er algeng forsenda í aðferðum sem beitt er í félagsvísindum og sálfræði og oftast gengur hún upp. En ekki alltaf. Greinilegasta dæmið um það þegar breytur hafa verið mældar á nafn eða raðkvarða. Þáttahleðsla segir til um hallatölu aukningar (eða minnkunar þegar formerkið er mínus) í mælieiningu mældu breytunnar fyrir einnar einingar aukningu á þættinum. Þetta samband meikar aðeins sens ef gildi mældu breytunnar eru í röð og bilið á milli gildanna er jafnstórt hvar sem maður er staddur á kvarða breytunnar. Þess vegna skal aðeins beita þáttagreiningu þegar um er að ræða interval eða quasi-interval mælingum. 
+
+Það er hægt að þáttagreina tvíkosta breytur en slíkt skilar oft niðurstöðum sem eru misleading. Fyrst og fremst er það vegna þess að slík atriði skila oft erfiðleikaþáttum sem eru til marks um endorsement rate mældra breyta frekar en undirliggjandi hugsmíðar sem er verið að meta með mældu breytunum. Þess vegna er best að nota sérhæfðar þáttagreiningarlausnir þegar unnið er með tvíkostabreytur. 
+
+Stundum er ekki hægt að ganga út frá línulegum áhrif þáttarins á mældu breyturnar – en það er þá alveg eins og í regression: Samvirkni eða sveiglínutengsl.
+
+#### Forsendur um aðgerðir til að fitta líkani
+Fjölbreytu normaldreifing er forsenda þegar ML er notað. Rannsóknir hafa hins vegar bent til þess að ML sé í lagi að því marki að ekki sé um að ræða alvarleg brot á forsendum, það er, ML þáttagreining er tiltölulega ónæm fyrir brotum á forsendum. En það er þó ekki þannig að hægt sé að líta fram hjá þessari forsendu og rannsakendum ber alltaf að taka hana með í reikninginn. 
+
+Af þessu vakna tvær spurningar: 
+
+  1) Hvenær veit rannsakandi að frávik frá normaldreifingu séu nógu mikil til að bjaga niðurstöður að einhverju marki? 
+  2) Ef um er að ræða alvarleg frávik frá forsendum, hvað er hægt að taka til bragðs?
+
+"Substantial distortions in ML parameter estimates did not emerge until measured variables had an absolute value of skew of two or greater and an absolute value of kurtosis of seven or greater. Thus, data sets with skew and kurtosis values substantially smaller than these guidelines are unlikely to present problems for ML EFA, whereas data sets at or above these values might be problematic. pp. 99"
+
+Svo er að sjálfsögðu alltaf góð hugmynd að skoða vel og vandlega normalplot í gegnum hugbúnaðinn sem á að nota fyrir greininguna. 
+
+Hvað er hægt að gera? 
+
+  1) Búa til parcels (aggregera saman nokkrar breytur í eina), 
+
+  2) Nonlinear transformation, til dæmis power transformation. Log eða setja í annað veld. Box-Cox., 
+
+  3) Nota annars konar aðferð við að fitta módelinu og sleppa því að nota ML. Það er þó ekki mælt með þessu en hins vegar er hægt að skoða hvort aðrar aðferðir (sem ekki gera ráð fyrir multivariable normality) gefi allt aðrar niðurstöður heldur en aðferðir á borð við ML sem gera ráð fyrir normality. Með því fær rannsakandi betri hugmynd um það hvort dreifing breytanna hafi óæskileg áhrif á niðurstöður EFA.
+
+#### Fullkomin línuleg dependency milli mældra breyta
+Annar eiginleiki mældra breyta er að engin mæld breyta í spurningalista (battery) sé fullkomin línuleg function af öðrum mældum breytum í batteríinu. Það er, ákveðin mæld breyta ætti ekki að vera accounted for af línulegri combination annarra mældra breyta eða línulegri transformation annarra mældra breyta í batteríinu. Þetta gæti til dæmis gerst ef rannsakandinn væri með mælda breyta í gagnasafninu sem væri summa eða meðaltal nokkrra annarra breyta í settinu. Þessi aggregeraða breyta væri fullkomlega skýrt af mældum breytunum sem voru notaðar til að reikna hana. 
+
+Þetta leiðir til villu - > not positive definite.
+

@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Kafli 2 Aðfallsgreining hlutfalla | Tölfræði 3 fyrir BS nema í Sálfræði (útgáfa 0.1 haust 2019)</title>
+  <meta name="description" content="Farið yfir kennsluefni í Tölfræði 3." />
+  <meta name="generator" content="bookdown 0.16 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Kafli 2 Aðfallsgreining hlutfalla | Tölfræði 3 fyrir BS nema í Sálfræði (útgáfa 0.1 haust 2019)" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Farið yfir kennsluefni í Tölfræði 3." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Kafli 2 Aðfallsgreining hlutfalla | Tölfræði 3 fyrir BS nema í Sálfræði (útgáfa 0.1 haust 2019)" />
+  
+  <meta name="twitter:description" content="Farið yfir kennsluefni í Tölfræði 3." />
+  
+
+<meta name="author" content="Anton Örn Karlsson" />
+
+
+<meta name="date" content="2019-11-24" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+<link rel="next" href="þáttagreining.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Tölfræði 3</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Inngangur</a></li>
+<li class="chapter" data-level="2" data-path="aðfallsgreining-hlutfalla.html"><a href="aðfallsgreining-hlutfalla.html"><i class="fa fa-check"></i><b>2</b> Aðfallsgreining hlutfalla</a><ul>
+<li class="chapter" data-level="2.1" data-path="aðfallsgreining-hlutfalla.html"><a href="aðfallsgreining-hlutfalla.html#logreg-inngangur"><i class="fa fa-check"></i><b>2.1</b> Inngangur</a></li>
+<li class="chapter" data-level="2.2" data-path="aðfallsgreining-hlutfalla.html"><a href="aðfallsgreining-hlutfalla.html#dæmi-um-tvíkostabreytur"><i class="fa fa-check"></i><b>2.2</b> Dæmi um tvíkostabreytur</a></li>
+<li class="chapter" data-level="2.3" data-path="aðfallsgreining-hlutfalla.html"><a href="aðfallsgreining-hlutfalla.html#tvíliðudreifing"><i class="fa fa-check"></i><b>2.3</b> Tvíliðudreifing</a></li>
+<li class="chapter" data-level="2.4" data-path="aðfallsgreining-hlutfalla.html"><a href="aðfallsgreining-hlutfalla.html#hl-likur"><i class="fa fa-check"></i><b>2.4</b> Hlutfallslíkur</a></li>
+<li class="chapter" data-level="2.5" data-path="aðfallsgreining-hlutfalla.html"><a href="aðfallsgreining-hlutfalla.html#hlutfallslíkur-tveggja-hópa"><i class="fa fa-check"></i><b>2.5</b> Hlutfallslíkur tveggja hópa</a></li>
+<li class="chapter" data-level="2.6" data-path="aðfallsgreining-hlutfalla.html"><a href="aðfallsgreining-hlutfalla.html#af-hverju-ekki-að-nota-línulega-aðfallsgreiningu"><i class="fa fa-check"></i><b>2.6</b> Af hverju ekki að nota línulega aðfallsgreiningu?</a></li>
+<li class="chapter" data-level="2.7" data-path="aðfallsgreining-hlutfalla.html"><a href="aðfallsgreining-hlutfalla.html#aðfallsgreining-hlutfalla-1"><i class="fa fa-check"></i><b>2.7</b> Aðfallsgreining hlutfalla</a><ul>
+<li class="chapter" data-level="2.7.1" data-path="aðfallsgreining-hlutfalla.html"><a href="aðfallsgreining-hlutfalla.html#hvað-er-náttúrulegur-lógarithmi"><i class="fa fa-check"></i><b>2.7.1</b> Hvað er náttúrulegur lógarithmi?</a></li>
+<li class="chapter" data-level="2.7.2" data-path="aðfallsgreining-hlutfalla.html"><a href="aðfallsgreining-hlutfalla.html#uppsetning-líkansins"><i class="fa fa-check"></i><b>2.7.2</b> Uppsetning líkansins</a></li>
+<li class="chapter" data-level="2.7.3" data-path="aðfallsgreining-hlutfalla.html"><a href="aðfallsgreining-hlutfalla.html#áhættuhlutfall"><i class="fa fa-check"></i><b>2.7.3</b> Áhættuhlutfall</a></li>
+<li class="chapter" data-level="2.7.4" data-path="aðfallsgreining-hlutfalla.html"><a href="aðfallsgreining-hlutfalla.html#tegundir-frumbreyta-í-aðfallsgreiningu-hlutfalla"><i class="fa fa-check"></i><b>2.7.4</b> Tegundir frumbreyta í aðfallsgreiningu hlutfalla</a></li>
+<li class="chapter" data-level="2.7.5" data-path="aðfallsgreining-hlutfalla.html"><a href="aðfallsgreining-hlutfalla.html#dönsk-íbúakönnun"><i class="fa fa-check"></i><b>2.7.5</b> Dönsk íbúakönnun</a></li>
+</ul></li>
+<li class="chapter" data-level="2.8" data-path="aðfallsgreining-hlutfalla.html"><a href="aðfallsgreining-hlutfalla.html#ályktun-á-grundvelli-aðfallsgreiningar-hlutfalla"><i class="fa fa-check"></i><b>2.8</b> Ályktun á grundvelli aðfallsgreiningar hlutfalla</a><ul>
+<li class="chapter" data-level="2.8.1" data-path="aðfallsgreining-hlutfalla.html"><a href="aðfallsgreining-hlutfalla.html#öryggisbil"><i class="fa fa-check"></i><b>2.8.1</b> Öryggisbil</a></li>
+<li class="chapter" data-level="2.8.2" data-path="aðfallsgreining-hlutfalla.html"><a href="aðfallsgreining-hlutfalla.html#marktektarpróf"><i class="fa fa-check"></i><b>2.8.2</b> Marktektarpróf</a></li>
+<li class="chapter" data-level="2.8.3" data-path="aðfallsgreining-hlutfalla.html"><a href="aðfallsgreining-hlutfalla.html#dæmi"><i class="fa fa-check"></i><b>2.8.3</b> Dæmi</a></li>
+</ul></li>
+<li class="chapter" data-level="2.9" data-path="aðfallsgreining-hlutfalla.html"><a href="aðfallsgreining-hlutfalla.html#sennileikahlutfall"><i class="fa fa-check"></i><b>2.9</b> Sennileikahlutfall</a></li>
+<li class="chapter" data-level="2.10" data-path="aðfallsgreining-hlutfalla.html"><a href="aðfallsgreining-hlutfalla.html#fjölbreytu-aðfallsgreining-hlutfalla"><i class="fa fa-check"></i><b>2.10</b> Fjölbreytu aðfallsgreining hlutfalla</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="þáttagreining.html"><a href="þáttagreining.html"><i class="fa fa-check"></i><b>3</b> Þáttagreining</a><ul>
+<li class="chapter" data-level="3.1" data-path="þáttagreining.html"><a href="þáttagreining.html#markmið-þáttagreiningar-og-lykilhugtök"><i class="fa fa-check"></i><b>3.1</b> Markmið þáttagreiningar og lykilhugtök</a></li>
+<li class="chapter" data-level="3.2" data-path="þáttagreining.html"><a href="þáttagreining.html#samdreifni--og-fylgnifylki"><i class="fa fa-check"></i><b>3.2</b> Samdreifni- og fylgnifylki</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="þáttagreining.html"><a href="þáttagreining.html#dæmi-1"><i class="fa fa-check"></i><b>3.2.1</b> Dæmi</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="þáttagreining.html"><a href="þáttagreining.html#myndræn-framsetning-þáttagreiningar"><i class="fa fa-check"></i><b>3.3</b> Myndræn framsetning þáttagreiningar</a></li>
+<li class="chapter" data-level="3.4" data-path="þáttagreining.html"><a href="þáttagreining.html#formúlur-þáttagreiningar"><i class="fa fa-check"></i><b>3.4</b> Formúlur þáttagreiningar</a><ul>
+<li class="chapter" data-level="3.4.1" data-path="þáttagreining.html"><a href="þáttagreining.html#annað-dæmi"><i class="fa fa-check"></i><b>3.4.1</b> Annað dæmi</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="þáttagreining.html"><a href="þáttagreining.html#í-hvað-notum-við-þáttagreiningu"><i class="fa fa-check"></i><b>3.5</b> Í hvað notum við þáttagreiningu?</a><ul>
+<li class="chapter" data-level="3.5.1" data-path="þáttagreining.html"><a href="þáttagreining.html#koma-auga-á-hugsmíðar-innan-ákveðins-sviðs-construct-identification."><i class="fa fa-check"></i><b>3.5.1</b> 1. Koma auga á hugsmíðar innan ákveðins sviðs (construct identification).</a></li>
+<li class="chapter" data-level="3.5.2" data-path="þáttagreining.html"><a href="þáttagreining.html#vinna-við-smíði-mælitækja-í-sálfræði."><i class="fa fa-check"></i><b>3.5.2</b> 2. Vinna við smíði mælitækja í sálfræði.</a></li>
+</ul></li>
+<li class="chapter" data-level="3.6" data-path="þáttagreining.html"><a href="þáttagreining.html#forsendur-þáttagreiningar"><i class="fa fa-check"></i><b>3.6</b> Forsendur þáttagreiningar</a><ul>
+<li class="chapter" data-level="3.6.1" data-path="þáttagreining.html"><a href="þáttagreining.html#eiginleikar-mældu-breytanna"><i class="fa fa-check"></i><b>3.6.1</b> Eiginleikar mældu breytanna:</a></li>
+<li class="chapter" data-level="3.6.2" data-path="þáttagreining.html"><a href="þáttagreining.html#eiginleikar-úrtaksins"><i class="fa fa-check"></i><b>3.6.2</b> Eiginleikar úrtaksins</a></li>
+</ul></li>
+<li class="chapter" data-level="3.7" data-path="þáttagreining.html"><a href="þáttagreining.html#leitandi-eða-staðfestandi-þáttagreining"><i class="fa fa-check"></i><b>3.7</b> Leitandi eða staðfestandi þáttagreining</a><ul>
+<li class="chapter" data-level="3.7.1" data-path="þáttagreining.html"><a href="þáttagreining.html#hvort-á-að-nota-leitandi-eða-staðfestandi-þáttagreiningu"><i class="fa fa-check"></i><b>3.7.1</b> Hvort á að nota leitandi eða staðfestandi þáttagreiningu?</a></li>
+</ul></li>
+<li class="chapter" data-level="3.8" data-path="þáttagreining.html"><a href="þáttagreining.html#hver-er-munurinn-á-þáttagreiningu-og-meginhlutagreiningu-fa-vs-pca"><i class="fa fa-check"></i><b>3.8</b> Hver er munurinn á þáttagreiningu og meginhlutagreiningu (FA vs PCA)</a><ul>
+<li class="chapter" data-level="3.8.1" data-path="þáttagreining.html"><a href="þáttagreining.html#þáttagreining-1"><i class="fa fa-check"></i><b>3.8.1</b> Þáttagreining</a></li>
+<li class="chapter" data-level="3.8.2" data-path="þáttagreining.html"><a href="þáttagreining.html#meginhlutagreining"><i class="fa fa-check"></i><b>3.8.2</b> Meginhlutagreining</a></li>
+<li class="chapter" data-level="3.8.3" data-path="þáttagreining.html"><a href="þáttagreining.html#af-hverju-ætti-meginhlutagreining-að-vera-notuð-frekar-en-þáttagreining"><i class="fa fa-check"></i><b>3.8.3</b> Af hverju ætti meginhlutagreining að vera notuð frekar en þáttagreining?</a></li>
+</ul></li>
+<li class="chapter" data-level="3.9" data-path="þáttagreining.html"><a href="þáttagreining.html#tæknileg-framkvæmd-þáttagreiningar"><i class="fa fa-check"></i><b>3.9</b> Tæknileg framkvæmd þáttagreiningar</a><ul>
+<li class="chapter" data-level="3.9.1" data-path="þáttagreining.html"><a href="þáttagreining.html#aðferðir-til-að-máta-líkanið-við-gögnin"><i class="fa fa-check"></i><b>3.9.1</b> Aðferðir til að máta líkanið við gögnin</a></li>
+<li class="chapter" data-level="3.9.2" data-path="þáttagreining.html"><a href="þáttagreining.html#fjöldi-þátta-sem-verða-dregnir-út."><i class="fa fa-check"></i><b>3.9.2</b> Fjöldi þátta sem verða dregnir út.</a></li>
+<li class="chapter" data-level="3.9.3" data-path="þáttagreining.html"><a href="þáttagreining.html#þáttasnúningur"><i class="fa fa-check"></i><b>3.9.3</b> Þáttasnúningur</a></li>
+</ul></li>
+<li class="chapter" data-level="3.10" data-path="þáttagreining.html"><a href="þáttagreining.html#nokkur-fleiri-orð-um-forsendur-þáttagreiningar"><i class="fa fa-check"></i><b>3.10</b> Nokkur fleiri orð um forsendur þáttagreiningar</a><ul>
+<li class="chapter" data-level="3.10.1" data-path="þáttagreining.html"><a href="þáttagreining.html#forsendur-sem-eru-undirliggjandi-þáttalíkaninu-common-factor-model"><i class="fa fa-check"></i><b>3.10.1</b> Forsendur sem eru undirliggjandi þáttalíkaninu (common factor model)</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="heimildir.html"><a href="heimildir.html"><i class="fa fa-check"></i>Heimildir</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Tölfræði 3 fyrir BS nema í Sálfræði (útgáfa 0.1 haust 2019)</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="aðfallsgreining-hlutfalla" class="section level1">
+<h1><span class="header-section-number">Kafli 2</span> Aðfallsgreining hlutfalla</h1>
+<div id="logreg-inngangur" class="section level2">
+<h2><span class="header-section-number">2.1</span> Inngangur</h2>
+<p>Byggir á línulegri aðfallsgreiningu. Nema þar vorum við að nota samfellda fylgibreytu og eina eða fleiri frumbreytur í líkani þar sem við erum að fjalla um sambandið þarna á milli.</p>
+<p>Þegar við erum með fylgibreytu sem er flokkabreyta með tveimur möguleikum þá notum við annars konar tegund aðferðar til að kanna tengslin. Sú aðferð er nefnd aðfallsgreining hlutfalla eða logistic regression uppá ensku.</p>
+<p>Mikilvægt er að fylgibreytan er sett upp sem tvíkosta breyta sem tekur aðeins gildin 0 og 1. Þá er einnig hægt að segja að 1 standi fyrir árangur og 0 standi fyrir að misheppnast. Ef við tökum meðaltal af breytu af þessu tagi þá fáum við hlutfall árangurs - þannig að meðaltal af tvíkostabreytu með gildin 0 og 1 gefur okkur alltaf hlutfall þeirra sem eru með 1 í gagnasafninu.</p>
+<p>Ef um er að ræða gögn með óháða tvíkosta breytu þá er talað um tvíliða gögn (binomial setting). Það eru fjórar forsendur sem þarf að uppfylla í tilraun til að um sé að ræða binomial setting:
+1) hver mæling fellur í einn tveggja flokka sem eru kallaðir success/failure
+2) það er endanlegur fjöldi mælinga
+3) allar mælingarnar eru óháðar
+4) líkurnar á success eru þær sömu fyrir allar mælingarnar - jafnar</p>
+<p>Ef tilraunin er með binomial setting, þá er handahófsbreytan X fjöldi successes binomial random breyta og líkindadreifing X er tvílhiða dreifingu (binomial distribution)</p>
+</div>
+<div id="dæmi-um-tvíkostabreytur" class="section level2">
+<h2><span class="header-section-number">2.2</span> Dæmi um tvíkostabreytur</h2>
+<p>Sem dæmi um breytur sem eru tvíliða og nota má í aðfallsgreiningu hlutfalla eru:</p>
+<ul>
+<li>staðið eða fall í áfanga</li>
+<li>hvort viðkomandi nái greiningarviðmiðum þunglyndis</li>
+<li>mat á eigin heilsufari (til dæmis, endurkóðað úr fimm punkta kvarða í tvíkosta breytu)</li>
+<li>hvort viðkomandi drekki kaffi eða ekki</li>
+</ul>
+</div>
+<div id="tvíliðudreifing" class="section level2">
+<h2><span class="header-section-number">2.3</span> Tvíliðudreifing</h2>
+<p>Tvíliðudreifing er dreifing á talningu breytunnar X (það er talning á tilvikum þar sem X er 1) undir tvíliðu setting með tvo stika: n og p. n stendur fyrir fjölda mælinga og p eru líkurnar á árangri fyrir hverja einstaka mælingu. Möguleg gildi X eru heiltölur frá 0 til n og er skrifuð X is B(n,p).</p>
+<div class="figure" style="text-align: center"><span id="fig:binom-dist"></span>
+<img src="timaglosur_files/figure-html/binom-dist-1.png" alt="Tvíliðudreifingar með mismunandi stikum" width="80%" />
+<p class="caption">
+Mynd 2.1: Tvíliðudreifingar með mismunandi stikum
+</p>
+</div>
+<p>Á mynd <a href="aðfallsgreining-hlutfalla.html#fig:binom-dist">2.1</a> má sjá tvíliðudreifingu með mismunandi stikum. Í efri línunni fyrir miðju má sjá tvíliðudreifingu þar sem stikarnir eru 0.5 og 10 - sem merkir að úrtakið er af stærðinni 10 og líkurnar er 0.5. Þarna sjáum við að hæstu líkurnar eru við fimm - sem merkir að þar sem undirliggjandi líkurnar eru 0.5 þá eru hæstar líkur á að fá 5 árangursrík tilvik í úrtaki 10 tilvika. Til dæmis ef við köstum krónu 10 sinnum og við ætluðum að telja hversu oft landvætturinn birtist, þá myndum við búast við að eðlileg króna myndi fimm sinnum lenda á bergrisanum. En hins vegar sjáum við líka að það er eðlilegt að krónan myndi lenda fjórum sinnum eða sex sinnum á landvættinum þar sem líkurnar á þeim eru ekki langt frá líkunum á fimm sinnum. Með öðrum orðum, það væri ekki ólíklegt að kasta krónu tíu sinnum og í fjórum eða sex tilvikum myndum við fá bergrisann en samt væri um að ræða eðlilegan krónupening.</p>
+</div>
+<div id="hl-likur" class="section level2">
+<h2><span class="header-section-number">2.4</span> Hlutfallslíkur</h2>
+<p><em>p</em> er hlutfallið af hópnum sem er með gildið 1 á tiltekinni tvíkostabreytu (eða success). Ef við værum með handahófskennt úrtak af stærðinni <em>n</em> úr þýði þá dreifist fjöldi þeirra sem er með gildið einn (eða success) miðað við binomial dreifingu með parametrunum <em>n</em> og <em>p</em>.</p>
+<p>Hlutfallið er þá fjöldi þeirra sem eru með 1 á móti heildarfjölda í úrtakinu. Það merkjum við sem p-hatt þar sem um er að ræða mat á hlutfalli þýðisins á grundvelli úrtaksins.</p>
+<p>Þegar við notum aðfallsgreiningu hlutfalla þá notum við hins vegar hlutfallslíkur í stað hlutfalla. Hlutfallslíkur er hlutfallið milli hinna tveggja mögulegu útkoma (það er, hlutfallið milli þeirra sem eru með gildið 1 og þeirra sem eru með gildið 0 á tvíkostabreytunni).</p>
+<p><span class="math inline">\(hl=\frac{\hat{p} }{1-\hat{p}}\)</span></p>
+<p>Til dæmis gætum við tekið 1000 manna úrtak úr þjóðskrá og myndum spyrja alla hvort þeir hefðu kosið í síðustu kosningum. Í ljós kæmi að 700 þeirra hefðu kosið. Það merkir að hlutfallið er <span class="math inline">\(\hat{p}=\)</span> 0.7 en hlutfallslíkurnar eru 2.33</p>
+<p>Með því að námunda hlutfallslíkur þess að hafa kosið í síðustu kosningum má sjá að kjósendur eru um 2 á móti 1 - fyrir hverja 2 kjósendur var einn sem ekki kaus.</p>
+<p>Annað dæmi gæti verið að draga spil af handahófi úr spilastokk. Ef við gerum það þá vitum við líkurnar á að draga spaða eru 13/52 eða 1/4 sem við getum einnig skrifað sem tugabrot 0.25. Hlutfallslíkurnar á því að draga spaða eru 0.33. Hins vegar eru hlutfallslíkurnar á að draga spil af öðrum lit 3 á móti 1.</p>
+</div>
+<div id="hlutfallslíkur-tveggja-hópa" class="section level2">
+<h2><span class="header-section-number">2.5</span> Hlutfallslíkur tveggja hópa</h2>
+<p>Við höfum áður skoðað hvernig hægt er að bera saman tvö hlutföll í úrtaki, til dæmis hvort karlar eða konur séu líklegri til að nota Instagram. Í því tilviki skoðum við muninn á hlutfalli beggja hópa og reiknum öryggisbil utan um muninn. Ef öryggisbilið inniheldur ekki núll þá getum við ályktað sem svo að líklega sé um að ræða mun á instagram notkun í þýðinu.</p>
+<p>Önnur leið til að meta hvort kyn tengist líkum þess að nota Instagram er að framkvæma aðfallsgreiningu hlutfalla. Það sem gerir hana enn árangursríkari sem aðferð til að kanna tengsl milli breyta er að hún tekur fleiri en eina frumbreytu. Ennfremur er aðfallsgreining hlutfalla, rétt eins og línuleg aðfallsgreining, sveigjanleg að því marki að hægt er að setja fram sveiglínusamband og samvirkni milli tveggja eða fleiri frumbreyta í líkaninu. A Aðfallsgreining hlufalla hentar hvort sem er fyrir samfelldar eða flokkaðar frumbreytur en fylgibreytan er alltaf tvíkosta og tekur gildin 0 og 1.</p>
+</div>
+<div id="af-hverju-ekki-að-nota-línulega-aðfallsgreiningu" class="section level2">
+<h2><span class="header-section-number">2.6</span> Af hverju ekki að nota línulega aðfallsgreiningu?</h2>
+<p>Tæknilega séð er hægt að nota línulega aðfallsgreiningu þegar fylgibreytan er tvíkosta en það getur hins vegar dregið dilk á eftir sér. Skoðum dæmi.</p>
+<p>Í félagskönnun í Bandaríkjunum er spurt um sjónvarpsáhorf. Þar mætti til dæmis skoða að hvaða marki aldur tengist sjónvarpsháorfi. Í þessu tilviki ætlum við að skoða að hvaða marki aldur tengist því hvort fólk horfi á sjónvarp lengur en 6 klukkustundir á dag.</p>
+<p>Samkvæmt gagnasafninu okkar horfa um 24% Bandaríkjamanna í sex klukkustundir eða lengur á sjónvarpið á degi hverjum. Ef við setjum upp línulegt aðfallsgreiningarlíkan þá kemur hins vegar strax í ljós að það býr til spágildi sem geta ekki gengið upp þar sem þau lenda undir núlli - eru neikvæðar. Það má sjá á <a href="aðfallsgreining-hlutfalla.html#fig:two-models">2.2</a> þar sem rauða línan stendur fyrir spágildi línulega líkansins. Eins og sjá má verða spágildi þeirra sem eru 30 ára og yngri neikvæð, en það gengur ekki upp þar sem verið er að vinna með hlutfall. Græna línan á <a href="aðfallsgreining-hlutfalla.html#fig:two-models">2.2</a> sýnir hins vegar niðurstöður aðfallsgreiningar hlutfalla þar sem við sjáum hlutfallslíkur yfir mismunandi aldur.</p>
+<div class="figure" style="text-align: center"><span id="fig:two-models"></span>
+<img src="timaglosur_files/figure-html/two-models-1.png" alt="Samanburður á línulegri aðfallsgreiningu og aðfallsgreiningu hlutfalla" width="80%" />
+<p class="caption">
+Mynd 2.2: Samanburður á línulegri aðfallsgreiningu og aðfallsgreiningu hlutfalla
+</p>
+</div>
+<p>Fyrir utan þennan alvarlega galla kemur það líka fyrir að leif líkans þar sem línuleg aðfallsgreining hefur verið notuð til að reikna samband milli einnar eða fleiri fumbreyta og einnar tvíkosta fylgibreytu, dreifst afbrigðilega með þeim afleiðingum að marktektarpróf sem byggja á líkaninu verða skekkt og gefa ranga mynd af aðstæðum í þýði.</p>
+</div>
+<div id="aðfallsgreining-hlutfalla-1" class="section level2">
+<h2><span class="header-section-number">2.7</span> Aðfallsgreining hlutfalla</h2>
+<p>Líkanið sem notað er fyrir aðfallsgreiningu hlutfalla lítur úr svona:</p>
+<p><span class="math inline">\(log(\frac{p}{1-p} ) \beta_{0}+\beta_{1}x\)</span></p>
+<p>Þar sem <em>p</em> er tvíliðu hlutfall (binomial proportion) og x er skýribreyta líkansins. Stikar líkansins fyrir eru <span class="math inline">\(\beta_{0}\)</span> og <span class="math inline">\(\beta_{1}\)</span>.</p>
+<p>Í línulegu líkani eru við að setja upp líkan þar sem meðaltal fylgibreytunnar veltur línulega á frumbreytu líkansins. Í aðfallsgreiningu hlutfalla er þetta meðaltal tekið af <em>p</em> sem er þá fjöldi tilvika sem er með 1 á fylgibreytunni eða fjöldi successess. Í aðfallsgreiningu hlutfalla er markmiðið með líkaninu að finna meðaltal <em>p</em> út frá frumbreytunni <em>x</em>. Eins og við sáum áður þá er tæknilega hægt að gera þetta með línulegri aðfallsgreiningu en það veldur vandræðum þar sem í hvert skipti sem <span class="math inline">\(\beta_{0}\)</span> tekur eitthvað annað gildi en 0 þá munu há gildi <em>x</em> gefa spágildi (það er, <span class="math inline">\(\beta_{0}+\beta_{1}\)</span>) sem falla utan mögulegra gilda <em>p</em>, það er falla utan við spönnina frá 0 til 1. Það sem gert er með aðfallsgreiningu hlutfalla er að umbreyta hlutfallslíkunum með náttúrlegum lógarithma.</p>
+<p>Þarna er gott að muna hvað hlutfallslíkur eru. Það má sjá hér: <a href="aðfallsgreining-hlutfalla.html#hl-likur">2.4</a>.</p>
+<p>En það sem líkanið gerir er að það tekur fylgibreytuna (sem við táknum með <em>y</em>, rétt eins og í línulegri aðfallsgreiningu) og umreiknar hana með náttúrlegum lógarithma og reiknar svo aðfallsgreiningu með þeim frumbreytum sem höfðu verið skilgreindar, það er, <em>x</em> breyturnar. Á mynd <a href="aðfallsgreining-hlutfalla.html#fig:varlogreg">2.3</a> má sjá mismunandi líkön aðfallsgreiningar hlutfalla þar sem hallatölu líkansins er haldið stöðugri en skurðpunkti þess er breytt þannig að hann nái frá -16 upp í -4. Hins vegar má sjá á mynd <a href="aðfallsgreining-hlutfalla.html#fig:varlogreg2">2.4</a> hvernig tengsl breytanna líta út myndrænt þegar skurðpunktinum er haldið stöðugum en hallastuðlinum er breytt frá einu líkani til annars.</p>
+<div class="figure" style="text-align: center"><span id="fig:varlogreg"></span>
+<img src="timaglosur_files/figure-html/varlogreg-1.png" alt="Mismunandi líkön aðfallsgreiningar hlutfalla" width="80%" />
+<p class="caption">
+Mynd 2.3: Mismunandi líkön aðfallsgreiningar hlutfalla
+</p>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:varlogreg2"></span>
+<img src="timaglosur_files/figure-html/varlogreg2-1.png" alt="Mismunandi líkön aðfallsgreiningar hlutfalla" width="80%" />
+<p class="caption">
+Mynd 2.4: Mismunandi líkön aðfallsgreiningar hlutfalla
+</p>
+</div>
+<div id="hvað-er-náttúrulegur-lógarithmi" class="section level3">
+<h3><span class="header-section-number">2.7.1</span> Hvað er náttúrulegur lógarithmi?</h3>
+<p>Þegar við tökum náttúrlegan lógarithma af ákveðinni tölu þá er það gert með því að finna í hvaða veldi þarf að setja fastann <em>e</em> til að útkoman verði upprunalega talan. Fastinn <em>e</em> er einnig kallaður tala Eulers og er hún (í styttu formi) 2.7182818 Til dæmis má sjá að náttúrulegur lógarithmi af tölunni 3 er 1.0986123. Það merkir að til þess við verðum að setja fastann <em>e</em> í 1.0986123 veldi til þess að hann verði 3, þar er: 3 <span class="math inline">\(= e^{log(3)}\)</span></p>
+<p>Eins og áður segir er þetta skilgreiningin á náttúrulegum lógarithma en það er í raun hægt að taka lógarithma með því að nota hvaða jákvæða tölugildi sem er fyrir grunn lógarithmans. Til dæmis er algengt að taka lógarithma út frá grunninum 10. Góður kostur náttúrlegs lógarithma er að ef hann er tekinn af frum- eða fylgibreytu í aðfallsgreiningarlíkani þá er hægt að túlka umbreyttu breytuna á grunni prósentubreytinga. Til dæmis er fylgibreytu hefði verið umbreytt með náttúrulegum lógarithm í línulegri aðfallsgreiningu þá mætti túlka hallastuðul frumbreytu líkansins sem prósentubreytingu fylgibreytunnar.</p>
+<p>Umbreytingu með lógarithma er stundum beitt til að temja ódæl gögn, til dæmis þegar forsenda aðfallsgreiningar um línulegt samband frum- og fylgibreyta virðist ekki standast. Við slíkar aðstæður gagnast oft prýðilega vel að umbreyta annað hvort frumbreytu eða fylgibreytu með lógarithma og veltur þá valið oft á því hvort breytan er skekktari.</p>
+<p>Ein leið til að hugsa lógarithma er að hann dregur saman gögnin þannig að fjarlægðin milli gildanna á breytunni verður ekki eins mikil. Dæmi um þetta má sjá í töflu <a href="aðfallsgreining-hlutfalla.html#tab:logtafla">2.1</a>. Í töflunni má sjá að spönn hrágildanna er gríðarleg (frá 2 og uppí 50000) en þegar búið er að taka lógarithma þá eru tölurnar mun meðfærilegri og samþjappaðri þar sem spönnin er frá 0,69 og upp í 10,8. Þetta sama getum við séð þegar við tökum lógarithma af af hlutfallslíkum í aðfallsgreiningu hlutfalla - skalinn þjappast saman en samt þannig að fjarlægðin milli gildanna helst, hún minnkar bara.</p>
+<table>
+<caption><span id="tab:logtafla">Tafla 2.1: </span>Samanburður milli hrágagna og þar sem búið er að taka náttúrlegan lógarithma</caption>
+<thead>
+<tr class="header">
+<th></th>
+<th align="right">Fyrsta mæling</th>
+<th align="right">Önnur mæling</th>
+<th align="right">Þriðja mæling</th>
+<th align="right">Fjórða mæling</th>
+<th align="right">Fimmta mæling</th>
+<th align="right">Sjötta mæling</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>hrágögn</td>
+<td align="right">2.0000000</td>
+<td align="right">3.000000</td>
+<td align="right">7.00000</td>
+<td align="right">90.00000</td>
+<td align="right">1000.000000</td>
+<td align="right">50000.00000</td>
+</tr>
+<tr class="even">
+<td>logarithmi</td>
+<td align="right">0.6931472</td>
+<td align="right">1.098612</td>
+<td align="right">1.94591</td>
+<td align="right">4.49981</td>
+<td align="right">6.907755</td>
+<td align="right">10.81978</td>
+</tr>
+</tbody>
+</table>
+<p>Samkvæmt hefðbundinni skilgreiningu er aðeins hægt að taka lógarithma af tölum sem eru hærri en 0 - þannig að undir venjulegum kringumstæðum er ekki hægt að taka lógarithma af núlli eða neikvæðum tölum.</p>
+<p>Ef veldisvísisfall (exponential function) er tekið af tölu sem hefur verið umbreytt með lógarithma fæst upprunalega talan aftur. Þannig að <span class="math inline">\(exp(log(3))=3\)</span>.</p>
+</div>
+<div id="uppsetning-líkansins" class="section level3">
+<h3><span class="header-section-number">2.7.2</span> Uppsetning líkansins</h3>
+<p>Líkanið sem við vinnum með í aðfallsgreiningu hlutfalla er eins og það sem við notum í línulegri aðfallsgreiningu. Eini munurinn er að spágildin eru ekki lengur meðaltal fyrir mismunandi gildi á frumbreytunni <em>x</em> heldur lógarithmi hlutfallslíkinda fyrir mismunandi gildi frumbreytunnar <em>x</em> í líkaninu.</p>
+</div>
+<div id="áhættuhlutfall" class="section level3">
+<h3><span class="header-section-number">2.7.3</span> Áhættuhlutfall</h3>
+<p>Þegar við fáum niðurstöður úr aðfallsgreiningu hlutfalla þá eru hallastuðlar allir á skala sem byggir á lógarithma hlutfallslíkinda. Það er hins vegar ekki þægilegt að túlka hallastuðla sem eru á þessum skala. Af þeirri ástæðu eru niðurstöðurnar yfirleitt alltaf unnar frekar og áhættuhlutfall reiknað.</p>
+<p>Það sem heitir á ensku odds ratio er nefnt áhættuhlutfall á íslensku. Áhættuhlutfall er einfalt að túlka en það er nokkuð frábrugðið frá þeim hallastuðlum sem við erum vön úr línulegri aðfallsgreiningu.</p>
+<p>Áhættuhlutfall er reiknað með því að taka anti-log eða veldisvísisfall af hallastuðlum líkansins. Með þessari aðgerð eru áhrif lógarithmans fjarlægð úr hallastuðlunum. Áhættuhlutfall er í raun hlutfallið milli tveggja hlutfallslíka. Spönn þess er frá 0 til óendanlegs. Ef áhættuhlutfallið er 1 þá er það til marks um að engin tengsl er milli breytanna. Ef það er hærra en 1 þá er sambandið jákvætt en ef það er lægra en 1 þá er sambandið neikvætt.</p>
+</div>
+<div id="tegundir-frumbreyta-í-aðfallsgreiningu-hlutfalla" class="section level3">
+<h3><span class="header-section-number">2.7.4</span> Tegundir frumbreyta í aðfallsgreiningu hlutfalla</h3>
+<p>Aðfallsgreining hlutfalla ræður bæði við samfelldar og flokkaðar frumbreytur. Sömu reglur gilda um notkun frumbreyta eins og fyrir línulega aðfallsgreiningu: Hægt er að nota samfelldar breytur beint af kúnni í líkanið en fyrir flokkabreytur þarf að ákvarða einn samanburðarhóp sem aðrir flokkar verða bornir saman við.</p>
+<p>Þegar niðurstöðurnar eru túlkaðar út frá flokkuðum frumbreytum er það gert á grundvelli þess að miðað við viðmiðunarhópinn þá var sá hópur sem kemur fram í niðurstöðutöflunni með þeim mun hærra áhættuhlutfall að jafnaði eða lægra ef áhættuhlutfallið var lægra en 1.</p>
+<p>Ef við værum til dæmis að bera saman kynin þar sem karlar væru kóðaðir sem 1 og konur sem 0 eftir líkindum þess að fá greiddar örorkubætur frá Tryggingastofnun, þá myndi áhættuhlutfallið 0,8 benda til þess að karla væru að jafnaði um 20% ólíklegri en konur til að fá örorkubætur greiddar.</p>
+<p>Að sama skapi ef við værum aftur að skoða kynin með sömu kóðun og áður nema út frá líkindum þess að hafa verið sviptur ökuréttindum einhverntíman á ævinni, þá myndi áhættuhlutfallið 1,35 benda til þess að karlar væru að jafnaði um 35% líklegri en konur til að hafa tapað bílprófinu.</p>
+</div>
+<div id="dönsk-íbúakönnun" class="section level3">
+<h3><span class="header-section-number">2.7.5</span> Dönsk íbúakönnun</h3>
+<p>Við erum með gagnasafn frá Kaupmannahöfn þar sem íbúar í borginni voru spurðir um tegundir húsnæðis, samskipti við nágranna sína og ánægju með húsnæði sitt. Það sem við höfum áhuga á að skoða eru tengslin milli þess hversu mikil samskipti svarendur höfðu við nágranna sína og hversu ánægðir þeir voru með húsnæði sitt. Gagnasafnið er fengið héðan: <a href="https://data.princeton.edu/wws509/datasets/#copen" class="uri">https://data.princeton.edu/wws509/datasets/#copen</a></p>
+<p>Breytan contact var til marks um hversu mikil samskipti svarendur höfðu við nágranna sína. Hún var kóðuð 1 þar sem samskipti voru mikil en 0 þar sem samskipti voru lítil.</p>
+<p>Í upprunalega gagnasafninu var ánægja með húsnæðið mælt með þrískiptri breytu sem skiptis í lítið ánægðir, í meðallagi ánægðir og mjög ánægðir. Í greiningunni hér voru þeir teknir úr gagnasafninu sem voru í meðallagi ánægðir. Breytan var svo endurkóðuð þannig að þeir sem voru mjög ánægðir fengu gildið 1 en þeir sem voru lítið ánægðir fengu gildið 0.</p>
+<p>Niðurstöður líkansins má sjá í töflu <a href="aðfallsgreining-hlutfalla.html#tab:kobentafla">2.2</a>. Þar má sjá tengsl frumbreytunnar við fylgibreytuna miðað við lógarithma hlutfallslíkinda, staðalvilluna, niðurstöður z-prófs og samsvarandi p-gildi.</p>
+<table>
+<caption><span id="tab:kobentafla">Tafla 2.2: </span>Niðurstöður aðfallsgreiningar hlutfalla</caption>
+<thead>
+<tr class="header">
+<th></th>
+<th align="right">Stuðull</th>
+<th align="right">Staðalvilla</th>
+<th align="right">z-gildi</th>
+<th align="right">p-gildi</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Skurðpunktur</td>
+<td align="right">0.04</td>
+<td align="right">0.09</td>
+<td align="right">0.48</td>
+<td align="right">0.63</td>
+</tr>
+<tr class="even">
+<td>Samskipti við nágranna</td>
+<td align="right">0.22</td>
+<td align="right">0.12</td>
+<td align="right">1.89</td>
+<td align="right">0.06</td>
+</tr>
+</tbody>
+</table>
+<p>Í töflu <a href="aðfallsgreining-hlutfalla.html#tab:kobentafla2">2.3</a> má hins vegar sjá þegar búið er að hreinsa lógarithman úr niðurstöðunum og þá kemur í ljós áhættuhlutfallið auk öryggsibilsins fyrir áhættuhlutfallið. Samkvæmt þessum niðurstöðum eru þeir sem eiga mikil samskipti við nágranna sína um 22% líklegri til að vera mjög ánægðir með húsnæðiskost sinn, miðað við þá sem áttu í litlum samskiptum við nágranna. Hins vegar er einnig rétt að skoða öryggisbilið sem bendir til að ekki sé víst að um sé að ræða mun sem á sér stoð í þýðinu þar sem öryggisbil áhættuhlutfallsins inniheldur 1 og eins og við munum þá stendur 1 fyrir engin tengsl milli frum -og fylgibreytu líkansins.</p>
+<table>
+<caption><span id="tab:kobentafla2">Tafla 2.3: </span>Niðurstöður aðfallsgreiningar hlutfalla</caption>
+<thead>
+<tr class="header">
+<th align="left">Frumbreyta</th>
+<th align="right">Áhættuhlutfall</th>
+<th align="right">Öryggisbil neðra</th>
+<th align="right">Öryggisbil efra</th>
+<th align="left">Kvarði breytunnar</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Samskipti við nágranna</td>
+<td align="right">1.24</td>
+<td align="right">0.99</td>
+<td align="right">1.56</td>
+<td align="left">Indicator variable</td>
+</tr>
+</tbody>
+</table>
+<p>Mikilvægt er að ef hópum frumbreytunnar hefði verið snúið við (það er, þeir sem voru í miklum samskiptum við nágranna hefðu fengið 0 og þeir sem voru í litlum samskiptum fengið 1) þá hefði áhættuhlutfallið breyst. Þær niðurstöður má sjá í töflu <a href="aðfallsgreining-hlutfalla.html#tab:kobentafla3">2.4</a>. Þá má sjá að ef við notum þá sem voru í miklum samskiptum við nágranna sína sem viðmiðunarhóp þá voru þeir sem voru í litlum samskiptum að jafnaði um 20% ólíklegri til að vera ánægðir með húsnæðisstöðu sína, miðað við samanburðarhópinn.</p>
+<table>
+<caption><span id="tab:kobentafla3">Tafla 2.4: </span>Niðurstöður aðfallsgreiningar hlutfalla - breytt kóðun frumbreytunnar</caption>
+<thead>
+<tr class="header">
+<th align="left">Frumbreyta</th>
+<th align="right">Áhættuhlutfall</th>
+<th align="right">Öryggisbil neðra</th>
+<th align="right">Öryggisbil efra</th>
+<th align="left">Kvarði breytunnar</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Samskipti við nágranna</td>
+<td align="right">0.8</td>
+<td align="right">0.64</td>
+<td align="right">1.01</td>
+<td align="left">Indicator variable</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="ályktun-á-grundvelli-aðfallsgreiningar-hlutfalla" class="section level2">
+<h2><span class="header-section-number">2.8</span> Ályktun á grundvelli aðfallsgreiningar hlutfalla</h2>
+<p>Nú er gott að rifja upp hvernig líkanið fyrir aðfallsgreiningu hlutfalla lítur út:</p>
+<p><span class="math inline">\(log(\frac{p}{1-p} ) \beta_{0}+\beta_{1}x\)</span></p>
+<p>Þar sem <em>p</em> er tvíliðu hlutfall (binomial proportion) og x er skýribreyta líkansins. Stikar líkansins fyrir eru <span class="math inline">\(\beta_{0}\)</span> og <span class="math inline">\(\beta_{1}\)</span>.</p>
+<p>Það kallar á talsverða vinnu (og helst sérhæfðan hugbúnað) að reikna aðfallsgreiningu hlutfalla í höndunum. Ein undantekning á þessu er ef um er að ræða líkan með einni tvískiptri frumbreytu. Í því tilfelli getum við auðveldlega reiknað hallastuðulinn og skurðpunktinn.</p>
+<p>Ef við skoðum dæmið sem við tókum áður út frá dönsku íbúakönnuninni þá líta formúlunar svona út:</p>
+<ul>
+<li>Formúla fyrir aðfallsgreiningu hlutfalla fyrir þá sem höfðu mikil samskipti við nágranna sína</li>
+</ul>
+<p><span class="math inline">\(log(\frac{p_{samskipti} }{1-p_{samskipti}} )=\beta_{0}+\beta_{1}\)</span></p>
+<ul>
+<li>Formúla fyrir þá sem höfðu lítil samskipti við nágranna sína</li>
+</ul>
+<p><span class="math inline">\(log(\frac{p_{lítilsamskipti} }{1-p_{lítilsamskipti}} )=\beta_{0}\)</span></p>
+<p>Út frá þessu sjáum við að matið fyrir skurðpunkt líkansins er það sama og matið á hlutfallslíkum þeirra sem eiga lítil samskipti við nágranna sína. Við sjáum líka að til að reikna mat á hallastuðli líkansins þá þarf að finna mismuninn milli hlutfallslíka hópanna tveggja. Við getum reiknað hlutfallslíkurnar og sjáum að þær eru 0.258574 fyrir þá sem eiga í mikum samskiptum við nágranna og 0.0411273 fyrir hina.</p>
+<p>Út frá þessu getum við reiknað hallastuðul líkansins</p>
+<p><span class="math inline">\(\beta_{1}=\)</span> 0.2174467</p>
+<p>Eins og við vitum þá er hann illtúlkanlegur og því viljum við taka antilog af honum. Þá verður niðurstaðan 1.2428992.</p>
+<p>Ályktunartölfræði er reiknuð með sama hætti fyrir aðfallsgreiningu hlutfalla rétt eins og fyrir línulega aðfallsgreiningu. Mat á stikum er reiknað fyrir líkanið og staðalvilla er metin fyrir þá.</p>
+<div id="öryggisbil" class="section level3">
+<h3><span class="header-section-number">2.8.1</span> Öryggisbil</h3>
+<p>Öryggisbil eru reiknuð á hefðbundinn hátt, nema miðað er við normaldreifingu í stað t-dreifingar, sem er sú dreifing sem miðað er við í línulegri aðfallsgreiningu.
+Öryggisbil fyrir hallastuðla er: <span class="math inline">\(b_{1} \pm z^\ast SE_{b1}\)</span></p>
+<p>Fyrir hlutfallslíkur er öryggisbilið reiknað með að umbreyta öryggisbilinu með því að taka antilog af því. Það er gert svohljóðandi: <span class="math inline">\((e^{b_{1}-z^\ast SE_{b_{1} } }, e^{b_{1}+z^\ast SE_{b_{1} } })\)</span> þar sem <span class="math inline">\(z^*\)</span> stendur fyrir normal þéttleikakúrvu með svæðið C (sem er öryggisbilið sem miðað er við) milli <span class="math inline">\(-z^*\)</span> og <span class="math inline">\(+z^*\)</span>.</p>
+<p>Þegar um er að ræða hlutfallslíkur þá skoðum við grant hvort öryggisbilið nái utan um 1, þar sem 1 er til marks um að enginn munur sé á hlutföllum hópanna sem við erum að skoða (þegar um er að ræða tvíkosta frumbreytu) eða að engin tengsl séu milli frumbreytunnar og fylgibreytunnar (þegar við erum með samfellda frumbreytu). Ef öryggisbilið inniheldur gildið 1 þá getum við ekki verið viss um að tengsl séu til staðar í þýðinu.</p>
+</div>
+<div id="marktektarpróf" class="section level3">
+<h3><span class="header-section-number">2.8.2</span> Marktektarpróf</h3>
+<p>Marktektarpróf eru unnin út frá hlutfallinu milli hallastuðulsins og staðalvillunnar. Oft eru niðurstöður marktektarprófanna gefnar sem veldistölur þessara niðurstaðna (það er, squared niðurstöður). Í þeim tilvikum er um að ræða p-gildi út frá kí-kvaðrat dreifingunni með n-1 frígráðu.</p>
+<p>Til að prófa hvort hallatalan sé marktækt ólík 0 (það er, hvort líklegt sé að fá hallatölu af þessum styrkleika ef ekki er um að ræða tengsl í þýði) er eftirfarandi próf framvkæmt:</p>
+<p><span class="math inline">\(z=\frac{b_1}{SE_{b_{1}}}\)</span></p>
+<p>Þetta gildi er borið saman við z-gildi út frá normaldreifingu. Það er nokkuð flókið að reikna út staðalvillu fyrir stika í aðfallsgreiningu hlutfalla og því látum við hugbúnaðinn um það verkefni.</p>
+<p>Þetta próf er kallað Wald próf en í sumum tilvikum reiknar tölfræðihugbúnaður kíkvaðrat próf til að próf hvort um sé að ræða marktækan hallastuðul eða ekki. Það er veltur á því að: <span class="math inline">\(\chi^2=z^2\)</span></p>
+<p>Þar sem við erum jafnan að vinna með hlutfallslíkur þá breytist marktektarprófið í að verða próf á því hvort hlutfallslíkindin víki marktækt frá 1. Það er, hlutfallslíkindi sem eru 1 er til marks um að enginn munur sé á hlutföllum tveggja hópanna (ef um er að ræða tvískipta frumbreytu). Þess vegna er núlltilgátan í þessu tilviki að hlutfallslíkindin eru 1. Aðaltilgátan er þá að hlutfallslíkindin séu einhver önnur en 1 - það er, að munur sé á hópunum.</p>
+</div>
+<div id="dæmi" class="section level3">
+<h3><span class="header-section-number">2.8.3</span> Dæmi</h3>
+<p>Gögnin sem við notum til að skoða aðfallsgreiningu hlutfalla kemur úr manntali bandaríkjanna frá árinu 1994. Eftirfarandi breytur er að finna í gagnasafninu:</p>
+<p>Frumbreytur:</p>
+<ul>
+<li>age: continuous.</li>
+<li>workclass: Private, Self-emp-not-inc, Self-emp-inc, Federal-gov, Local-gov, State-gov, Without-pay, Never-worked.</li>
+<li>fnlwgt: continuous.</li>
+<li>education: Bachelors, Some-college, 11th, HS-grad, Prof-school, Assoc-acdm, - Assoc-voc, 9th, 7th-8th, 12th, Masters, 1st-4th, 10th, Doctorate, 5th-6th, Preschool.</li>
+<li>education-num: continuous.</li>
+<li>marital-status: Married-civ-spouse, Divorced, Never-married, Separated, Widowed, Married-spouse-absent, Married-AF-spouse.</li>
+<li>occupation: Tech-support, Craft-repair, Other-service, Sales, Exec-managerial, Prof-specialty, Handlers-cleaners, Machine-op-inspct, Adm-clerical, Farming-fishing, Transport-moving, Priv-house-serv, Protective-serv, Armed-Forces.</li>
+<li>relationship: Wife, Own-child, Husband, Not-in-family, Other-relative, Unmarried.</li>
+<li>race: White, Asian-Pac-Islander, Amer-Indian-Eskimo, Other, Black.</li>
+<li>sex: Female, Male.</li>
+<li>capital-gain: continuous.</li>
+<li>capital-loss: continuous.</li>
+<li>hours-per-week: continuous.</li>
+<li>native-country: United-States, Cambodia, England, Puerto-Rico, Canada, Germany, Outlying-US(Guam-USVI-etc), India, Japan, Greece, South, China, Cuba, Iran, Honduras, Philippines, Italy, Poland, Jamaica, Vietnam, Mexico, Portugal, Ireland, France, Dominican-Republic, Laos, Ecuador, Taiwan, Haiti, Columbia, Hungary, Guatemala, Nicaragua, Scotland, Thailand, Yugoslavia, El-Salvador, Trinadad&amp;Tobago, Peru, Hong, Holand-Netherlands.</li>
+</ul>
+<p>Fylgibreytan:
+- income: &gt;50K, &lt;=50K</p>
+<p>Frekari upplýsingar og gagnasafnið sjálft má nálgast hér: <a href="https://archive.ics.uci.edu/ml/datasets/census+income" class="uri">https://archive.ics.uci.edu/ml/datasets/census+income</a></p>
+<p>Okkar verkefni er að skoða hvort munur sé á líkum þess að tekjur fólks séu hærri eða lægri en 50 þúsund dalir á ári eftir því hvort um er að ræða karl eða konu. Fyrsta verkefni okkar er að endurreikna báðar breytur þannig að þær séu báðar tvíkosta og innihaldi aðeins gildin 0 og 1.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw">library</span>(tidyverse)</a>
+<a class="sourceLine" id="cb1-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb1-3" data-line-number="3"><span class="co">#Fyrst lesa gögnin inn í R</span></a>
+<a class="sourceLine" id="cb1-4" data-line-number="4">gogn =<span class="st"> </span><span class="kw">read.delim</span>(<span class="dt">file=</span><span class="st">&quot;~/kennsla/2019/Tölfræði III/tolfr3/timaglosur/adult.data&quot;</span></a>
+<a class="sourceLine" id="cb1-5" data-line-number="5">                  , <span class="dt">sep =</span> <span class="st">&quot;,&quot;</span>, <span class="dt">header =</span> <span class="ot">FALSE</span>)</a>
+<a class="sourceLine" id="cb1-6" data-line-number="6"></a>
+<a class="sourceLine" id="cb1-7" data-line-number="7"><span class="co">#setja nöfn á allar breyturnar í settinu. </span></a>
+<a class="sourceLine" id="cb1-8" data-line-number="8"><span class="co">#Þegar unnið er með gagnaskrá af gerðinni dat þarf jafnan að gera það.</span></a>
+<a class="sourceLine" id="cb1-9" data-line-number="9"><span class="kw">names</span>(gogn) =<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;age&quot;</span>,<span class="st">&quot;workclass&quot;</span>,<span class="st">&quot;fnlwgt&quot;</span>,<span class="st">&quot;education&quot;</span>,<span class="st">&quot;education_num&quot;</span></a>
+<a class="sourceLine" id="cb1-10" data-line-number="10">                ,<span class="st">&quot;marital_status&quot;</span>,<span class="st">&quot;occupation&quot;</span>,<span class="st">&quot;relationship&quot;</span>,<span class="st">&quot;race&quot;</span></a>
+<a class="sourceLine" id="cb1-11" data-line-number="11">                ,<span class="st">&quot;sex&quot;</span>,<span class="st">&quot;capital_gain&quot;</span>,<span class="st">&quot;capital_loss&quot;</span>,<span class="st">&quot;hours_per_week&quot;</span></a>
+<a class="sourceLine" id="cb1-12" data-line-number="12">                ,<span class="st">&quot;native_country&quot;</span>,<span class="st">&quot;income&quot;</span>)</a>
+<a class="sourceLine" id="cb1-13" data-line-number="13"></a>
+<a class="sourceLine" id="cb1-14" data-line-number="14"><span class="co">#loks eru frumbreytan og fylgibreytan endurkóðaðar til að taka aðeins gildin 0 og 1.</span></a>
+<a class="sourceLine" id="cb1-15" data-line-number="15"></a>
+<a class="sourceLine" id="cb1-16" data-line-number="16"><span class="co">#fyrst skoðum við núverandi gildi breytunnar</span></a>
+<a class="sourceLine" id="cb1-17" data-line-number="17"><span class="kw">table</span>(gogn<span class="op">$</span>income)</a></code></pre></div>
+<pre><code>## 
+##  &lt;=50K   &gt;50K 
+##  24720   7841</code></pre>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1">gogn<span class="op">$</span>income =<span class="st"> </span><span class="kw">as.numeric</span>(gogn<span class="op">$</span>income)<span class="op">-</span><span class="dv">1</span></a>
+<a class="sourceLine" id="cb3-2" data-line-number="2"><span class="co">#og svo skoðum við gildi breytunnar eftir umbreytingu</span></a>
+<a class="sourceLine" id="cb3-3" data-line-number="3"><span class="kw">table</span>(gogn<span class="op">$</span>income)</a></code></pre></div>
+<pre><code>## 
+##     0     1 
+## 24720  7841</code></pre>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="co">#hér viljum við að 0 sé fyrir þá sem eru með árstekjur </span></a>
+<a class="sourceLine" id="cb5-2" data-line-number="2"><span class="co">#undir 50 þúsund dölum en þeir sem eru með hærri tekjur </span></a>
+<a class="sourceLine" id="cb5-3" data-line-number="3"><span class="co">#eiga að fá gildið 1.</span></a>
+<a class="sourceLine" id="cb5-4" data-line-number="4"></a>
+<a class="sourceLine" id="cb5-5" data-line-number="5"></a>
+<a class="sourceLine" id="cb5-6" data-line-number="6"><span class="co">#svo endurkóðum við kynjabreytuna þannig að konur fái gildið 1 en karlar fái gildið 0</span></a>
+<a class="sourceLine" id="cb5-7" data-line-number="7">gogn <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb5-8" data-line-number="8"><span class="st">  </span><span class="kw">count</span>(sex)</a></code></pre></div>
+<pre><code>## # A tibble: 2 x 2
+##   sex           n
+##   &lt;fct&gt;     &lt;int&gt;
+## 1 &quot; Female&quot; 10771
+## 2 &quot; Male&quot;   21790</code></pre>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" data-line-number="1"><span class="co">#hérna endurkóðum við kynjabreytuna með tidyverse</span></a>
+<a class="sourceLine" id="cb7-2" data-line-number="2">gogn =<span class="st"> </span>gogn <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb7-3" data-line-number="3"><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">sex=</span><span class="kw">ifelse</span>(sex <span class="op">==</span><span class="st"> &#39; Female&#39;</span>, <span class="dv">1</span>, <span class="dv">0</span>))</a>
+<a class="sourceLine" id="cb7-4" data-line-number="4"></a>
+<a class="sourceLine" id="cb7-5" data-line-number="5">gogn<span class="op">$</span>sex =<span class="st"> </span><span class="kw">as.factor</span>(gogn<span class="op">$</span>sex)</a></code></pre></div>
+<p>Þegar því er lokið má hefja greininguna.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" data-line-number="1"><span class="co">#hér er líkanið skilgreint</span></a>
+<a class="sourceLine" id="cb8-2" data-line-number="2"><span class="co">#default stillingin er línileg aðfallsgreining og þess vegna þarf að breyta family í binomial</span></a>
+<a class="sourceLine" id="cb8-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb8-4" data-line-number="4">likan1 =<span class="st"> </span><span class="kw">glm</span>(income<span class="op">~</span>sex, <span class="dt">family=</span><span class="st">&quot;binomial&quot;</span>, <span class="dt">data=</span>gogn)</a>
+<a class="sourceLine" id="cb8-5" data-line-number="5"></a>
+<a class="sourceLine" id="cb8-6" data-line-number="6"><span class="co">#hér sjáum við svo hráar niðurstöður líkansins. </span></a>
+<a class="sourceLine" id="cb8-7" data-line-number="7"><span class="co">#Takið eftir að hér er ekki búið að umreikna hallastuðulinn </span></a>
+<a class="sourceLine" id="cb8-8" data-line-number="8"><span class="co">#þannig að hann er enn á lógarithma skala.</span></a>
+<a class="sourceLine" id="cb8-9" data-line-number="9"><span class="kw">summary</span>(likan1)</a></code></pre></div>
+<pre><code>## 
+## Call:
+## glm(formula = income ~ sex, family = &quot;binomial&quot;, data = gogn)
+## 
+## Deviance Residuals: 
+##     Min       1Q   Median       3Q      Max  
+## -0.8543  -0.8543  -0.4815  -0.4815   2.1034  
+## 
+## Coefficients:
+##             Estimate Std. Error z value Pr(&gt;|z|)    
+## (Intercept) -0.82013    0.01470  -55.78   &lt;2e-16 ***
+## sex1        -1.27614    0.03418  -37.33   &lt;2e-16 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## (Dispersion parameter for binomial family taken to be 1)
+## 
+##     Null deviance: 35948  on 32560  degrees of freedom
+## Residual deviance: 34270  on 32559  degrees of freedom
+## AIC: 34274
+## 
+## Number of Fisher Scoring iterations: 4</code></pre>
+<table>
+<caption><span id="tab:tekjutafla1">Tafla 2.5: </span>Samband kyns og tekna samkvæmt manntalinu 1996</caption>
+<thead>
+<tr class="header">
+<th align="left">Frumbreyta</th>
+<th align="right">Áhættuhlutfall</th>
+<th align="right">Öryggisbil neðra</th>
+<th align="right">Öryggisbil efra</th>
+<th align="left">Kvarði breytunnar</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Kyn</td>
+<td align="right">0.28</td>
+<td align="right">0.26</td>
+<td align="right">0.3</td>
+<td align="left">Indicator variable</td>
+</tr>
+</tbody>
+</table>
+<p>Í töflu <a href="aðfallsgreining-hlutfalla.html#tab:tekjutafla1">2.5</a> sjáum við niðurstöður líkansins þar sem spáð tengslin milli kyns og tekna eru skoðuð og þar sem búið er að umbreyta hallastuðli líkansins í áhættuhlutfall. Við vildum við vita hvort líkurnar á að vera með hærri árstekjur en 50 þúsund dollarar tengdust kyni. Hér sjáum við að konur er að jafnaði um 72% ólíklegri en karlar til að vera með árstekjur hærri en 50 þúsund dollarar, og 95% öryggisbilið nær frá 70 - 74%. Þetta er semsg</p>
+<p>Þetta er semsagt nokkuð nákvæmt mat, sem skýrist meðal annars af því hversu stórt úrtakið er (n = 32561). Ennfremur inniheldur öryggisbilið ekki 1 sem bendir til þess að líklega eru tengslin til staðar í þýðinu. Það má einnig sjá af hráau niðurstöðum líkansins úr R en þar mátti sjá marktækt Wald próf fyrir hallastuðulinn.</p>
+</div>
+</div>
+<div id="sennileikahlutfall" class="section level2">
+<h2><span class="header-section-number">2.9</span> Sennileikahlutfall</h2>
+<p>Wald prófið er notað til að kanna, fyri hvern og einn stika, hvort þeir séu marktækir eða ekki út frá <span class="math inline">\(\chi^2\)</span>-dreifingu með einni frígráðu. Þetta er einfalt próf en kann að vera bjagað, sérstaklega þegar um er að ræða lítil úrtök. Þegar um er að ræða niðurstöður með háu stikamati er staðalvillan oft ofmetin og þá verður gildi Wald prófsins vanmetið. Í þeim tilvikum getur Wald prófið bent til þess frumbreytan sem um ræðir skipti litlu eða engu máli fyrir forspá fylgibreytunnar.</p>
+<p>Af þessari ástæðu getur verið betra að nota sennileikahlutfall (likelihood ratio). Mælst er gegn því að nota gervi-<span class="math inline">\(R^2\)</span> þar sem þeir gefa yfirleitt ekki raunsanna mynd af gæðum líkansins.</p>
+<p>Hér sjáum við formúlu sennileikahlutfallsprófsins:</p>
+<p><span class="math inline">\(-2 \times ln(lr) = -2\times ln({L_{0}}/{L_{1}} )\)</span>
+eða
+<span class="math inline">\(-2 \times ln(lr) = -2\times (lnL_{0}-lnL_{1} )\)</span></p>
+<p>Það sem þetta þýðir er að tvö líkön eru borin saman, annars vegar líkan sem er aðeins með skurðpunkti (sem er táknað sem <span class="math inline">\(L_0\)</span>) og svo líkan þar sem hallastuðli hefur verið bætt við (sem er táknað sem <span class="math inline">\(L_1\)</span>). Með þessu getum við metið að hvaða marki mátgæði líkansins við gögnin batna við að setja hverja frumbreytu í líkanið.</p>
+<p>Gott er að bera saman niðurstöður Wald prófs fyrir hverja frumbreytu fyrir sig og niðurstöður sennileikahlutfallsins. Við getum skoðað dæmi þar sem við skáldum upp gögn sem líklegt er að hafi áhrif á niðurstöður Wald prófsins.</p>
+<div class="figure"><span id="fig:lrtestmynd"></span>
+<img src="timaglosur_files/figure-html/lrtestmynd-1.png" alt="Sambandið milli x og y" width="672" />
+<p class="caption">
+Mynd 2.5: Sambandið milli x og y
+</p>
+</div>
+<p>Á mynd <a href="aðfallsgreining-hlutfalla.html#fig:lrtestmynd">2.5</a> sjáum við samband tveggja breyta, x og y. Við reiknum aðfallsgreiningu hlutfalla, niðurstöðurnar má sjá í töflu <a href="aðfallsgreining-hlutfalla.html#tab:taflaxy">2.6</a>. Eins og sjá má er Wald-prófið langt, langt frá því að vera marktækt og p-gildið er nánast 1.</p>
+<table>
+<caption><span id="tab:taflaxy">Tafla 2.6: </span>Aðfallsgreining hlutfalla milli x og y</caption>
+<thead>
+<tr class="header">
+<th></th>
+<th align="right">Stuðlar</th>
+<th align="right">Staðalvilla</th>
+<th align="right">Wald próf</th>
+<th align="right">p-gildi</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>(Intercept)</td>
+<td align="right">-27.10781</td>
+<td align="right">37673.330</td>
+<td align="right">-0.00072</td>
+<td align="right">0.99943</td>
+</tr>
+<tr class="even">
+<td>x</td>
+<td align="right">0.99102</td>
+<td align="right">1028.555</td>
+<td align="right">0.00096</td>
+<td align="right">0.99923</td>
+</tr>
+</tbody>
+</table>
+<p>Ef við reiknum hins vegar sennileikahlutfallspróf þá fáum við allt aðra niðurstöðu; marktækt kí-kvaðrat próf.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb10-1" data-line-number="1"><span class="kw">lrtest</span>(likan2)</a></code></pre></div>
+<pre><code>## Likelihood ratio test
+## 
+## Model 1: y ~ x
+## Model 2: y ~ 1
+##   #Df  LogLik Df  Chisq Pr(&gt;Chisq)    
+## 1   2  0.0000                         
+## 2   1 -6.9315 -1 13.863  0.0001966 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
+<p>Að auki má geta þess að mælt er með því að nota Hosmer-Lemeshow prófið til að kanna mátgæði líkana sem byggja á aðfallsgreiningu hlutfalla. Í prófinu eru raunmælingar fylgibreytunnar bornar saman við væntigildi líkansins. Prófið gefur til kynna ef munurinn milli mældra gilda og væntigilda út frá líkaninu sé marktækuyr eða ekki. Ef þessi munur er markæktur þá er það til marks um að mátgæði líkansins sé ábótavant. Það eru hins vegar ákveðnir ágallar á Hosmer-Lemeshow prófinu og því eru til enn nýrri aðferðir til að skoða mátgæði mismunandi líkana, til dæmis <em>le Cessie–van Houwelingen–Copas–Hosmer unweighted sum of squares test</em>.</p>
+</div>
+<div id="fjölbreytu-aðfallsgreining-hlutfalla" class="section level2">
+<h2><span class="header-section-number">2.10</span> Fjölbreytu aðfallsgreining hlutfalla</h2>
+<p>Fjölbreytu aðfallsgreining hlutfalla er afar svipuð og þegar marghliða aðfallgreining er framkvæmd. Við bætum við fleiri frumbreytum og reynum með því að stjórna tölfræðilega fyrir áhrifum þeirra á fylgibreytuna. Það verður því alltaf að hafa í huga þegar við túlkum niðurstöðurnar.</p>
+<p>VIð ætlum að nota sama gagnasafn og áður, það sem snýr að bandaríska manntalinu árið 1996. Við ætlum að bæta einni skýringarbreytu við líkanið og athuga hvort það hafi einhver áhrif á kynjamuninn sem við sáum fyrr. Í þessu tilviki ætlum við að bæta aldri við líkanið.</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb12-1" data-line-number="1"><span class="co">#hér er líkanið skilgreint</span></a>
+<a class="sourceLine" id="cb12-2" data-line-number="2"><span class="co">#default stillingin er línileg aðfallsgreining og þess vegna þarf að breyta family í binomial</span></a>
+<a class="sourceLine" id="cb12-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb12-4" data-line-number="4">likan1 =<span class="st"> </span><span class="kw">glm</span>(income<span class="op">~</span>sex<span class="op">+</span>age, <span class="dt">family=</span><span class="st">&quot;binomial&quot;</span>, <span class="dt">data=</span>gogn)</a>
+<a class="sourceLine" id="cb12-5" data-line-number="5"></a>
+<a class="sourceLine" id="cb12-6" data-line-number="6"><span class="co">#hér sjáum við svo hráar niðurstöður líkansins. </span></a>
+<a class="sourceLine" id="cb12-7" data-line-number="7"><span class="co">#Takið eftir að hér er ekki búið að umreikna hallastuðulinn </span></a>
+<a class="sourceLine" id="cb12-8" data-line-number="8"><span class="co">#þannig að hann er enn á lógarithma skala.</span></a>
+<a class="sourceLine" id="cb12-9" data-line-number="9"><span class="kw">summary</span>(likan1)</a></code></pre></div>
+<pre><code>## 
+## Call:
+## glm(formula = income ~ sex + age, family = &quot;binomial&quot;, data = gogn)
+## 
+## Deviance Residuals: 
+##     Min       1Q   Median       3Q      Max  
+## -1.6685  -0.7648  -0.5887  -0.3190   2.4357  
+## 
+## Coefficients:
+##              Estimate Std. Error z value Pr(&gt;|z|)    
+## (Intercept) -2.406572   0.044440  -54.15   &lt;2e-16 ***
+## sex1        -1.248412   0.034925  -35.75   &lt;2e-16 ***
+## age          0.039029   0.001002   38.94   &lt;2e-16 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## (Dispersion parameter for binomial family taken to be 1)
+## 
+##     Null deviance: 35948  on 32560  degrees of freedom
+## Residual deviance: 32688  on 32558  degrees of freedom
+## AIC: 32694
+## 
+## Number of Fisher Scoring iterations: 4</code></pre>
+<table>
+<caption><span id="tab:tekjutafla2">Tafla 2.7: </span>Samband kyns og aldurs við tekjur samkvæmt manntalinu 1996</caption>
+<thead>
+<tr class="header">
+<th align="left">Frumbreyta</th>
+<th align="right">Áhættuhlutfall</th>
+<th align="right">Öryggisbil neðra</th>
+<th align="right">Öryggisbil efra</th>
+<th align="left">Kvarði breytunnar</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Kyn</td>
+<td align="right">0.287</td>
+<td align="right">0.268</td>
+<td align="right">0.307</td>
+<td align="left">Indicator variable</td>
+</tr>
+<tr class="even">
+<td align="left">Aldur</td>
+<td align="right">1.040</td>
+<td align="right">1.038</td>
+<td align="right">1.042</td>
+<td align="left">1</td>
+</tr>
+</tbody>
+</table>
+<p>Við sjáum í töflu <a href="aðfallsgreining-hlutfalla.html#tab:tekjutafla2">2.7</a> að kyn hefur enn marktæk tengsl við tekjur en það lækkar lítillega miðað við það sem við sáum áður. Aldur hefur hins vegar einnig tengsl við árstekjur á þann hátt að fyrir hvert aldursár, þá aukast líkurnar á því að vera með hærri en 50 þúsund dali í árstekjur að jafnaði um 4%, að teknu tilliti til áhrifa kyns. Öryggisbilið fyrir áhrif aldurs eru á bilinu 3,8 - 4,2%.</p>
+<p>Til gamans getum við bætt við annarri samfelldri frumbreytu í líkanið: Fjöldi ára í námi.</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb14-1" data-line-number="1"><span class="co">#hér er líkanið skilgreint</span></a>
+<a class="sourceLine" id="cb14-2" data-line-number="2"><span class="co">#default stillingin er línileg aðfallsgreining og þess vegna þarf að breyta family í binomial</span></a>
+<a class="sourceLine" id="cb14-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb14-4" data-line-number="4">likan1 =<span class="st"> </span><span class="kw">glm</span>(income<span class="op">~</span>sex<span class="op">+</span>age<span class="op">+</span>education_num, <span class="dt">family=</span><span class="st">&quot;binomial&quot;</span>, <span class="dt">data=</span>gogn)</a>
+<a class="sourceLine" id="cb14-5" data-line-number="5"></a>
+<a class="sourceLine" id="cb14-6" data-line-number="6"><span class="co">#hér sjáum við svo hráar niðurstöður líkansins. </span></a>
+<a class="sourceLine" id="cb14-7" data-line-number="7"><span class="co">#Takið eftir að hér er ekki búið að umreikna hallastuðulinn </span></a>
+<a class="sourceLine" id="cb14-8" data-line-number="8"><span class="co">#þannig að hann er enn á lógarithma skala.</span></a>
+<a class="sourceLine" id="cb14-9" data-line-number="9"><span class="kw">summary</span>(likan1)</a></code></pre></div>
+<pre><code>## 
+## Call:
+## glm(formula = income ~ sex + age + education_num, family = &quot;binomial&quot;, 
+##     data = gogn)
+## 
+## Deviance Residuals: 
+##     Min       1Q   Median       3Q      Max  
+## -2.4206  -0.6719  -0.4438  -0.1404   3.2565  
+## 
+## Coefficients:
+##                Estimate Std. Error z value Pr(&gt;|z|)    
+## (Intercept)   -6.445691   0.090355  -71.34   &lt;2e-16 ***
+## sex1          -1.323611   0.036840  -35.93   &lt;2e-16 ***
+## age            0.042613   0.001133   37.62   &lt;2e-16 ***
+## education_num  0.369457   0.006539   56.50   &lt;2e-16 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## (Dispersion parameter for binomial family taken to be 1)
+## 
+##     Null deviance: 35948  on 32560  degrees of freedom
+## Residual deviance: 28718  on 32557  degrees of freedom
+## AIC: 28726
+## 
+## Number of Fisher Scoring iterations: 5</code></pre>
+<table>
+<caption><span id="tab:tekjutafla3">Tafla 2.8: </span>Samband kyns, aldurs og menntunar við tekjur samkvæmt manntalinu 1996</caption>
+<thead>
+<tr class="header">
+<th align="left">Frumbreyta</th>
+<th align="right">Áhættuhlutfall</th>
+<th align="right">Öryggisbil neðra</th>
+<th align="right">Öryggisbil efra</th>
+<th align="left">Kvarði breytunnar</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Kyn</td>
+<td align="right">0.266</td>
+<td align="right">0.248</td>
+<td align="right">0.286</td>
+<td align="left">Indicator variable</td>
+</tr>
+<tr class="even">
+<td align="left">Aldur</td>
+<td align="right">1.044</td>
+<td align="right">1.041</td>
+<td align="right">1.046</td>
+<td align="left">1</td>
+</tr>
+<tr class="odd">
+<td align="left">FJöldi ára í námi</td>
+<td align="right">1.447</td>
+<td align="right">1.429</td>
+<td align="right">1.466</td>
+<td align="left">1</td>
+</tr>
+</tbody>
+</table>
+<p>Að lokum skoðum við hvernig tengslin milli tekna og menntunar líta út myndrænt.</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb16-1" data-line-number="1">fit =<span class="st"> </span><span class="kw">glm</span>(income <span class="op">~</span><span class="st"> </span>education_num, <span class="dt">data=</span>gogn, <span class="dt">family=</span>binomial)</a>
+<a class="sourceLine" id="cb16-2" data-line-number="2">newdat &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">education_num=</span><span class="kw">seq</span>(<span class="kw">min</span>(gogn<span class="op">$</span>education_num), <span class="kw">max</span>(gogn<span class="op">$</span>education_num),<span class="dt">len=</span><span class="dv">100</span>))</a>
+<a class="sourceLine" id="cb16-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb16-4" data-line-number="4">newdat<span class="op">$</span>income =<span class="st"> </span><span class="kw">predict</span>(fit, <span class="dt">newdata=</span>newdat, <span class="dt">type=</span><span class="st">&quot;response&quot;</span>)</a>
+<a class="sourceLine" id="cb16-5" data-line-number="5"></a>
+<a class="sourceLine" id="cb16-6" data-line-number="6"><span class="kw">plot</span>(<span class="kw">jitter</span>(income,<span class="dv">1</span>)<span class="op">~</span><span class="kw">jitter</span>(education_num, <span class="dv">1</span>), <span class="dt">data=</span>gogn, <span class="dt">col=</span><span class="st">&quot;red4&quot;</span>, <span class="dt">ylab =</span> <span class="st">&quot;Tekjur&quot;</span>, <span class="dt">xlab =</span> <span class="st">&quot;Menntun&quot;</span>)</a>
+<a class="sourceLine" id="cb16-7" data-line-number="7"><span class="kw">lines</span>(income <span class="op">~</span><span class="st"> </span>education_num, newdat, <span class="dt">col=</span><span class="st">&quot;green4&quot;</span>, <span class="dt">lwd=</span><span class="dv">2</span>)</a></code></pre></div>
+<p><img src="timaglosur_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<p>Og loks getum við skoðað sennileikahlutfallsprófið fyrir lokalíkanið okkar.</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb17-1" data-line-number="1"><span class="kw">lrtest</span>(likan1)</a></code></pre></div>
+<pre><code>## Likelihood ratio test
+## 
+## Model 1: income ~ sex + age + education_num
+## Model 2: income ~ 1
+##   #Df LogLik Df  Chisq Pr(&gt;Chisq)    
+## 1   4 -14359                         
+## 2   1 -17974 -3 7229.8  &lt; 2.2e-16 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="þáttagreining.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["timaglosur.pdf", "timaglosur.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
